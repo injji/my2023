@@ -1,0 +1,238 @@
+@import "../../../common/getvw.scss";
+
+.body_all {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+}
+
+.body_me {
+  position: absolute;
+  z-index: 4;
+}
+
+.arm_l_up {
+  position: absolute;
+  transform: rotate(0deg);
+  z-index: 8;
+
+  animation: arm_shout 5s linear infinite;
+}
+
+.arm_l_down {
+  position: absolute;
+  z-index: 9;
+
+  animation: arm_shout_carmera 5s linear infinite;
+}
+
+.arm_r_up {
+  position: absolute;
+  z-index: 3;
+}
+
+.arm_r_down {
+  position: absolute;
+  z-index: 3;
+}
+
+.hand_r {
+  position: absolute;
+  z-index: 10;
+}
+
+.bag {
+  position: relative;
+
+  .bag_body {
+    position: absolute;
+    z-index: 3;
+  }
+  .bag_top {
+    position: absolute;
+    z-index: 2;
+
+    animation: bag_move 1s linear infinite;
+  }
+  
+}
+
+@media (min-width: 1024px) {
+  .body_me {
+    top: pcvw(142px);
+    left: pcvw(-3px);
+    width: pcvw(183.51px);
+    height: pcvw(211.56px);
+  }
+
+  .arm_l_up {
+    width: pcvw(203.4px);
+    height: pcvw(268.8px);
+    left: pcvw(77px);
+    top: pcvw(145px);
+
+    @keyframes arm_shout {
+      0%,
+      100% {
+        transform: rotate(0deg) translate(pcvw(-36px), pcvw(0px));
+      }
+
+      50% {
+        transform: rotate(-15deg);
+      }
+    }
+  }
+
+  .arm_l_down {
+    width: pcvw(382.19px);
+    height: pcvw(307.11px);
+    left: pcvw(-151px);
+    top: pcvw(127px);
+    transform: translate(pcvw(-36px), 0px);
+    transform: rotate(15deg) translate(pcvw(-30px), pcvw(-45px));
+
+    @keyframes arm_shout_carmera {
+      0%,
+      100% {
+        transform: rotate(10deg) translate(pcvw(-40px), pcvw(-23px));
+      }
+
+      50% {
+        transform: translate(0, 0);
+      }
+    }
+  }
+
+  .arm_r_up {
+    width: pcvw(116.59px);
+    height: pcvw(175.29px);
+
+    left: pcvw(-75px);
+    top: pcvw(140px);
+  }
+
+  .arm_r_down {
+    width: pcvw(212.6px);
+    height: pcvw(116.31px);
+    left: pcvw(-170px);
+    top: pcvw(238px);
+  }
+
+  .hand_r {
+    width: pcvw(103.71px);
+    height: pcvw(95.41px);
+    left: pcvw(-200px);
+    top: pcvw(205px);
+  }
+
+  .bag {
+    width: pcvw(236.43px);
+    height: pcvw(267.91px);
+    left: pcvw(-200px);
+    top: pcvw(205px);
+  }
+
+  @keyframes bag_move {
+    0%,
+    100% {
+      transform: translate(0, 0) rotate(0);
+    }
+    50% {
+      transform: translate(pcvw(18px),  0) rotate(-23deg);
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .body_me {
+    width: movw(183.51px);
+    height: movw(211.56px);
+    top: movw(142px);
+    left: movw(-3px);
+  }
+
+  .arm_l_up {
+    width: movw(203.4px);
+    height: movw(268.8px);
+    left: movw(77px);
+    top: movw(145px);
+
+    @keyframes arm_shout {
+      0%,
+      100% {
+        transform: rotate(0deg) translate(movw(-36px), movw(0px));
+      }
+
+      50% {
+        transform: rotate(-15deg);
+      }
+    }
+  }
+
+  .arm_l_down {
+    width: movw(382.19px);
+    height: movw(307.11px);
+    left: movw(-151px);
+    top: movw(127px);
+    transform: translate(movw(-36px), 0px);
+    transform: rotate(15deg) translate(movw(-30px), movw(-45px));
+
+    @keyframes arm_shout_carmera {
+      0%,
+      100% {
+        transform: rotate(10deg) translate(movw(-40px), movw(-23px));
+      }
+
+      50% {
+        transform: translate(0, 0);
+      }
+    }
+  }
+
+  .arm_r_up {
+    width: movw(116.59px);
+    height: movw(175.29px);
+
+    left: movw(-75px);
+    top: movw(140px);
+  }
+
+  .arm_r_down {
+    width: movw(212.6px);
+    height: movw(116.31px);
+    left: movw(-170px);
+    top: movw(238px);
+  }
+
+  .hand_r {
+    width: movw(103.71px);
+    height: movw(95.41px);
+    left: movw(-200px);
+    top: movw(205px);
+  }
+
+  .bag {
+    width: movw(236.43px);
+    height: movw(267.91px);
+    left: movw(20px);
+    top: movw(120px);
+
+    .bag_top {
+      width: movw(138px);
+      height: movw(143px);
+      left: movw(98px);
+      top: movw(38px);
+    }
+  }
+
+  @keyframes bag_move {
+    0%,
+    100% {
+      transform: translate(0, 0) rotate(0);
+    }
+    50% {
+      transform: translate(movw(18px), 0) rotate(-23deg);
+    }
+  }
+}

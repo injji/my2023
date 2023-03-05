@@ -1,0 +1,168 @@
+@import "../../../common/getvw.scss";
+
+.backs {
+  position: absolute;
+}
+
+.big_leaf {
+  position: absolute;
+  z-index: 0;
+}
+
+.right_bg {
+  position: absolute;
+
+  .big_leaf {
+    transform: scaleX(-1);
+  }
+
+  .s_leaf1 {
+    position: absolute;
+  }
+
+  .s_leaf2 {
+    position: absolute;
+  }
+}
+
+.dumble {
+  position: absolute;
+
+  div {
+    position: absolute;
+  }
+
+  .dumble1 {
+    z-index: 10;
+  }
+}
+
+@media (min-width: 1024px) {
+  .big_leaf {
+    width: pcvw(352px);
+    height: pcvw(377px);
+    top: pcvw(250px);
+    left: pcvw(100px);
+  }
+
+  .right_bg {
+    top: pcvw(50px);
+    left: pcvw(400px);
+
+    .big_leaf {
+      top: pcvw(160px);
+      left: pcvw(80px);
+    }
+
+    .s_leaf1 {
+      width: pcvw(113px);
+      height: pcvw(136px);
+      top: pcvw(380px);
+      left: pcvw(330px);
+    }
+
+    .s_leaf2 {
+      width: pcvw(127px);
+      height: pcvw(127px);
+      top: pcvw(430px);
+      left: pcvw(330px);
+    }
+  }
+
+  .dumble {
+    .dumble1 {
+      width: pcvw(257.19px);
+      height: pcvw(141.73px);
+      top: pcvw(580px);
+      left: pcvw(280px);
+    }
+
+    .dumble2 {
+      width: pcvw(80.89px);
+      height: pcvw(50.56px);
+      top: pcvw(680px);
+      left: pcvw(120px);
+    }
+
+    .dumble3 {
+      width: pcvw(198.43px);
+      height: pcvw(109.35px);
+      transform: scaleX(-1);
+      top: pcvw(500px);
+      left: pcvw(600px);
+    }
+
+    .dumble4 {
+      width: pcvw(55.31px);
+      height: pcvw(34.57px);
+      transform: scaleX(-1);
+      top: pcvw(680px);
+      left: pcvw(600px);
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .big_leaf {
+    width: movw(352px);
+    height: movw(377px);
+    top: movw(250px);
+    left: movw(100px);
+  }
+
+  .right_bg {
+    top: movw(50px);
+    left: movw(400px);
+
+    .big_leaf {
+      top: movw(160px);
+      left: movw(80px);
+    }
+
+    .s_leaf1 {
+      width: movw(113px);
+      height: movw(136px);
+      top: movw(380px);
+      left: movw(330px);
+    }
+
+    .s_leaf2 {
+      width: movw(127px);
+      height: movw(127px);
+      top: movw(430px);
+      left: movw(330px);
+    }
+  }
+
+  .dumble {
+    .dumble1 {
+      width: movw(257.19px);
+      height: movw(141.73px);
+      top: movw(580px);
+      left: movw(280px);
+    }
+
+    .dumble2 {
+      width: movw(80.89px);
+      height: movw(50.56px);
+      top: movw(680px);
+      left: movw(120px);
+    }
+
+    .dumble3 {
+      width: movw(198.43px);
+      height: movw(109.35px);
+      transform: scaleX(-1);
+      top: movw(500px);
+      left: movw(600px);
+    }
+
+    .dumble4 {
+      width: movw(55.31px);
+      height: movw(34.57px);
+      transform: scaleX(-1);
+      top: movw(680px);
+      left: movw(600px);
+    }
+  }
+}

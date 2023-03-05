@@ -1,0 +1,76 @@
+@import "../../../common/getvw.scss";
+
+.window {
+  position: absolute;
+  z-index: 3;
+
+  span {
+    position: absolute;
+  }
+
+  .figma_window {
+    animation: window_opacity 5s step-end infinite;
+    // animation-delay: 5s;
+  }
+
+  .react_window {
+    animation: window_opacity2 5s step-end infinite;
+    // animation: window_opacity 1s linear infinite;
+  }
+}
+
+@media (min-width: 1024px) {
+  .window {
+    top: pcvw(0px);
+    left: pcvw(450px);
+
+    span {
+      width: pcvw(311.23px);
+      height: pcvw(179.76px);
+    }
+
+    .react_window {
+      top: pcvw(60px);
+      left: pcvw(75px);
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .window {
+    top: movw(0px);
+    left: movw(450px);
+
+    span {
+      width: movw(311.23px);
+      height: movw(179.76px);
+    }
+
+    .react_window {
+      top: movw(60px);
+      left: movw(75px);
+    }
+  }
+}
+
+@keyframes window_opacity {
+  0%,
+  10%,
+  90% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+}
+
+@keyframes window_opacity2 {
+  0%,
+  20%,
+  80% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+}

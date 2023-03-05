@@ -1,0 +1,169 @@
+@import "../../../common/getvw.scss";
+
+.zzam_wrap {
+  position: absolute;
+  z-index: 1;
+}
+
+.zzambbong {
+  position: absolute;
+}
+
+.stick_wrap {
+  position: absolute;
+  animation: ramem_up 3s linear infinite;
+}
+
+.stick {
+  position: absolute;
+
+  em {
+    position: absolute;
+    top: 0;
+    z-index: 0;
+  }
+
+  .stick2 {
+    z-index: 2;
+  }
+}
+
+.men {
+  z-index: 1;
+  position: absolute;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transform: rotate(-25deg);
+
+  span {
+    animation: ramem_leng 3s linear infinite;
+    background: #f0e0b8;
+  }
+}
+
+@media (min-width: 1024px) {
+  .zzam_wrap {
+    top: pcvw(400px);
+    left: pcvw(50px);
+  }
+
+  .zzambbong {
+    width: pcvw(222px);
+    height: pcvw(173px);
+    top: pcvw(50px);
+  }
+
+  .stick_wrap {
+    top: pcvw(8px);
+    left: pcvw(-8px);
+  }
+
+  .stick {
+    top: pcvw(5px);
+    left: pcvw(-5px);
+
+    em {
+      width: pcvw(118.86px);
+      height: pcvw(70.65px);
+      left: pcvw(10px);
+    }
+  }
+
+  .men {
+    border-left: pcvw(3px) solid #000;
+    border-top: pcvw(3px) solid #000;
+    top: pcvw(8px);
+    left: pcvw(90px);
+
+    span {
+      width: pcvw(5px);
+      height: pcvw(100px);
+      border-right: pcvw(3px) solid #000;
+    }
+  }
+
+  @keyframes ramem_up {
+    0%,
+    100% {
+      transform: translate(pcvw(10px), pcvw(25px));
+    }
+    50% {
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes ramem_leng {
+    0%,
+    100% {
+      height: pcvw(70px);
+    }
+    50% {
+      height: pcvw(100px);
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .zzam_wrap {
+    top: movw(400px);
+    left: movw(50px);
+  }
+
+  .zzambbong {
+    width: movw(222px);
+    height: movw(173px);
+    top: movw(50px);
+  }
+
+  .stick_wrap {
+    top: movw(8px);
+    left: movw(-8px);
+  }
+
+  .stick {
+    top: movw(5px);
+    left: movw(-5px);
+
+    em {
+      width: movw(118.86px);
+      height: movw(70.65px);
+      left: movw(10px);
+    }
+  }
+
+  .men {
+    border-left: movw(3px) solid #000;
+    border-top: movw(3px) solid #000;
+    top: movw(8px);
+    left: movw(90px);
+
+    span {
+      width: movw(5px);
+      height: movw(100px);
+      border-right: movw(3px) solid #000;
+    }
+  }
+
+  @keyframes ramem_up {
+    0%,
+    100% {
+      transform: translate(movw(10px), movw(25px));
+    }
+    50% {
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes ramem_leng {
+    0%,
+    100% {
+      height: movw(70px);
+    }
+    50% {
+      height: movw(100px);
+    }
+  }
+}

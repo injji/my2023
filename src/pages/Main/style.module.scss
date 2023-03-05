@@ -1,0 +1,34 @@
+@import "../../common/getvw.scss";
+
+.main_page {
+  width: 100vw;
+  height: 100vh;
+
+  background-color: #f9f5ec;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+
+  .main_wrap {
+    position: relative;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main_wrap {
+    width: pcvw(930px);
+    height: pcvw(730px);
+    top: pcvw(100px);
+  }
+}
+
+@media (max-width: 1023px) {
+  .main_wrap {
+    width: movw(930px);
+    height: movw(730px);
+    top: movw(100px);
+  }
+}

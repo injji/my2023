@@ -1,0 +1,154 @@
+@import "../../../common/getvw.scss";
+
+.head_wrap {
+  position: absolute;
+
+  .face {
+    position: relative;
+    z-index: 6;
+
+    em {
+      background: rgba(255, 208, 248, 0.3);
+      border-radius: 20px;
+      position: absolute;
+    }
+
+    .eye {
+      position: absolute;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      transform: rotate(28deg);
+
+      span {
+        border-radius: 10px;
+        background: #000;
+      }
+    }
+
+    .mouse {
+      position: absolute;
+
+      img {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        &.talk {
+          /* animation: taking .5s linear infinite; */
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .face {
+    width: pcvw(179.76px);
+    height: pcvw(158.1px);
+    animation: face_updown 5s linear infinite;
+
+    .eye {
+      column-gap: pcvw(12px);
+      left: pcvw(38px);
+      top: pcvw(70px);
+
+      span {
+        width: pcvw(6px);
+        height: pcvw(10px);
+        animation: eyeBlink_me 5s linear infinite;
+      }
+    }
+
+    .mouse {
+      width: pcvw(21.09px);
+      height: pcvw(11.48px);
+      left: pcvw(35px);
+      top: pcvw(85px);
+    }
+
+    em {
+      width: pcvw(24px);
+      height: pcvw(24px);
+      left: pcvw(63px);
+      top: pcvw(84px);
+    }
+  }
+
+  @keyframes face_updown {
+    0%,
+    100% {
+      transform: rotate(-13deg) translate(pcvw(-11px), pcvw(-6px));
+    }
+    50% {
+      transform: rotate(0deg) translate(0, 0);
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .face {
+    width: movw(179.76px);
+    height: movw(158.1px);
+    animation: face_updown 5s linear infinite;
+
+    .eye {
+      column-gap: movw(12px);
+      left: movw(38px);
+      top: movw(70px);
+
+      span {
+        width: movw(6px);
+        height: movw(10px);
+        animation: eyeBlink_me 5s linear infinite;
+      }
+    }
+
+    .mouse {
+      width: movw(21.09px);
+      height: movw(6.17px);
+      left: movw(35px);
+      top: movw(85px);
+    }
+
+    em {
+      width: movw(24px);
+      height: movw(24px);
+      left: movw(63px);
+      top: movw(84px);
+    }
+  }
+
+  @keyframes face_updown {
+    0%,
+    100% {
+      transform: rotate(-13deg) translate(movw(-11px), movw(-6px));
+    }
+    50% {
+      transform: rotate(0deg) translate(0, 0);
+    }
+  }
+}
+
+@keyframes eyeBlink_me {
+  0%,
+  30%,
+  36%,
+  100% {
+    transform: scale(1);
+  }
+  32%,
+  34% {
+    transform: scale(1, 0);
+  }
+}
+
+@keyframes taking {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}

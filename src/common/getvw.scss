@@ -1,0 +1,32 @@
+@function pcvw($target) {
+  $vw-context: (1920 * 0.01) * 1px;
+  @return ($target/$vw-context) * 1vw;
+}
+
+@function pcvh($target) {
+  $vw-context: (1920 * 0.01) * 1px;
+  @return ($target/$vw-context) * 1vh;
+}
+
+@function movw($target) {
+    $vw-context: (1200 * 0.01) * 1px;
+    @return ($target/$vw-context) * 1vw;
+  }
+  
+  @function movh($target) {
+    $vw-context: (1200 * 0.01) * 1px;
+    @return ($target/$vw-context) * 1vh;
+  }
+
+// @media (max-width: 1024px) {
+//   $vw-viewport: 1728;
+// }
+
+// @media (min-width: 768px) and (max-width: 1023px) {
+//   $vw-viewport: 900;
+// }
+
+// @media (max-width: 767px) {
+//   $vw-viewport: 500;
+// }
+

@@ -1,0 +1,32 @@
+@import "../../../common/getvw.scss";
+
+.main_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (min-width: 1024px) {
+  .main_text {
+    width: pcvw(580px);
+    margin-top: pcvw(-350px);
+
+    p {
+      font-size: pcvw(24px);
+      line-height: pcvw(34px);
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .main_text {
+    width: movw(595px);
+    margin-top: movw(-400px);
+
+    p {
+      font-size: movw(24px);
+      line-height: movw(34px);
+    }
+  }
+}

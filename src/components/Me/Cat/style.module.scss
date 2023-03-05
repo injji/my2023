@@ -1,0 +1,111 @@
+@import "../../../common/getvw.scss";
+
+.nabong {
+  position: absolute;
+  z-index: 8;
+}
+
+.eyes {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  position: absolute;
+
+  span {
+    background: #000;
+    border-radius: 5px;
+    animation: eyeBlink 3s linear infinite;
+  }
+}
+
+.c_tail {
+  position: absolute;
+  animation: cat_tail 2s ease infinite;
+}
+
+@media (min-width: 1024px) {
+  .nabong {
+    width: pcvw(152.7px);
+    height: pcvw(101.25px);
+    left: pcvw(-120px);
+    top: pcvw(280px);
+  }
+
+  .eyes {
+    column-gap: pcvw(15px);
+    top: pcvw(23px);
+    left: pcvw(30px);
+
+    span {
+      width: pcvw(6px);
+      height: pcvw(6px);
+    }
+  }
+
+  .c_tail {
+    width: pcvw(74.67px);
+    height: pcvw(46.94px);
+    left: pcvw(75px);
+    top: pcvw(63px);
+  }
+
+  @keyframes cat_tail {
+    0%,
+    100% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(-30deg) translate(pcvw(5px), pcvw(10px));
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .nabong {
+    width: movw(152.7px);
+    height: movw(101.25px);
+    left: movw(-120px);
+    top: movw(280px);
+  }
+
+  .eyes {
+    column-gap: movw(15px);
+    top: movw(23px);
+    left: movw(30px);
+
+    span {
+      width: movw(6px);
+      height: movw(6px);
+    }
+  }
+
+  .c_tail {
+    width: movw(74.67px);
+    height: movw(46.94px);
+    left: movw(75px);
+    top: movw(63px);
+  }
+
+  @keyframes cat_tail {
+    0%,
+    100% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(-30deg) translate(movw(5px), movw(10px));
+    }
+  }
+}
+
+@keyframes eyeBlink {
+  0%,
+  30%,
+  36%,
+  100% {
+    transform: scale(1);
+  }
+  32%,
+  34% {
+    transform: scale(1, 0);
+  }
+}
