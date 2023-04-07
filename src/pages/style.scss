@@ -1,0 +1,105 @@
+/* Styles for the slider container */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Styles for the slides */
+.slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
+
+  div {
+    width: 100%;
+    height: 200px;
+    background-color: #ddd;
+  }
+}
+
+/* Styles for the active slide */
+.slick-slide.slick-active {
+  display: block;
+}
+
+/* Styles for the slider arrows */
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 0;
+}
+
+/* Styles for the left arrow */
+.slick-arrow.slick-prev {
+  left: 10px;
+}
+
+/* Styles for the right arrow */
+.slick-arrow.slick-next {
+  right: 10px;
+}
+
+/* Styles for the dots */
+.slick-dots {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+
+/* Styles for the individual dots */
+
+.slick-dots li {
+  margin: 0 5px;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+}
+.slick-dots li.slick-active {
+  background-color: #000;
+}
+
+/* Styles for the active dot */
+.slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 10px;
+  height: 10px;
+  padding: 5px;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: none;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+/* Styles for the active dot */
+.slick-dots li.slick-active button {
+  background-color: #ccc;
+}

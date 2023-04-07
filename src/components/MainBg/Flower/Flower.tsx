@@ -1,4 +1,6 @@
 import React from "react";
+import { useAtom } from "jotai";
+import { FlowerAtom } from "../../../store/StoreMain";
 import styles from "./style.module.scss";
 
 import flower_red from "../../../assets/image/main/flower_leaf.svg";
@@ -7,9 +9,14 @@ import flower_bottom from "../../../assets/image/main/flower_bottom.svg";
 import flower_left from "../../../assets/image/main/flower_leaf2.svg";
 
 const Flower = () => {
+  const [flowerModal, setFlowerModal] = useAtom(FlowerAtom);
+  const handleFlowerModal = () => {
+    setFlowerModal(!flowerModal);
+  }
+
   return (
     <div className={styles.flower_wrap}>
-      <div className={styles.flower}>
+      <div className={styles.flower} onClick={handleFlowerModal}>
         <img src={flower_center} className={styles.center} />
         <img src={flower_red} />
       </div>

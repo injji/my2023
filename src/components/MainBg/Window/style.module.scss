@@ -3,6 +3,7 @@
 .window {
   position: absolute;
   z-index: 3;
+  cursor: pointer;
 
   span {
     position: absolute;
@@ -24,6 +25,11 @@
     top: pcvw(0px);
     left: pcvw(450px);
 
+    .windowclick {
+      width: pcvw(388px);
+      height: pcvw(240px);
+    }
+
     span {
       width: pcvw(311.23px);
       height: pcvw(179.76px);
@@ -36,10 +42,37 @@
   }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1023px) and (min-width: 769px) {
+  .window {
+    top: tabvw(0px);
+    left: tabvw(450px);
+
+    .windowclick {
+      width: tabvw(388px);
+      height: tabvw(240px);
+    }
+
+    span {
+      width: tabvw(311.23px);
+      height: tabvw(179.76px);
+    }
+
+    .react_window {
+      top: tabvw(60px);
+      left: tabvw(75px);
+    }
+  }
+}
+
+@media (max-width: 768px) {
   .window {
     top: movw(0px);
     left: movw(450px);
+
+    .windowclick {
+      width: movw(388px);
+      height: movw(240px);
+    }
 
     span {
       width: movw(311.23px);

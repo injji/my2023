@@ -25,6 +25,14 @@
   z-index: 9;
 
   animation: arm_shout_carmera 5s linear infinite;
+
+  .camera {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 15;
+    cursor: pointer;
+  }
 }
 
 .arm_r_up {
@@ -45,6 +53,17 @@
 .bag {
   position: relative;
 
+  .bagclick {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 15;
+    cursor: pointer;
+
+    width: 100%;
+    height: 100%;
+  }
+
   .bag_body {
     position: absolute;
     z-index: 3;
@@ -55,7 +74,6 @@
 
     animation: bag_move 1s linear infinite;
   }
-  
 }
 
 @media (min-width: 1024px) {
@@ -102,6 +120,11 @@
         transform: translate(0, 0);
       }
     }
+
+    .camera {
+      width: pcvw(168px);
+      height: pcvw(154px);
+    }
   }
 
   .arm_r_up {
@@ -129,8 +152,15 @@
   .bag {
     width: pcvw(236.43px);
     height: pcvw(267.91px);
-    left: pcvw(-200px);
-    top: pcvw(205px);
+    left: pcvw(30px);
+    top: pcvw(120px);
+  }
+
+  .bag_top {
+    width: pcvw(133.65px);
+    height: pcvw(143.98px);
+    left: pcvw(100px);
+    top: pcvw(40px);
   }
 
   @keyframes bag_move {
@@ -139,12 +169,110 @@
       transform: translate(0, 0) rotate(0);
     }
     50% {
-      transform: translate(pcvw(18px),  0) rotate(-23deg);
+      transform: translate(pcvw(18px), 0) rotate(-23deg);
     }
   }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1023px) and (min-width: 769px) {
+  .body_me {
+    top: tabvw(142px);
+    left: tabvw(-3px);
+    width: tabvw(183.51px);
+    height: tabvw(211.56px);
+  }
+
+  .arm_l_up {
+    width: tabvw(203.4px);
+    height: tabvw(268.8px);
+    left: tabvw(77px);
+    top: tabvw(145px);
+
+    @keyframes arm_shout {
+      0%,
+      100% {
+        transform: rotate(0deg) translate(tabvw(-36px), tabvw(0px));
+      }
+
+      50% {
+        transform: rotate(-15deg);
+      }
+    }
+  }
+
+  .arm_l_down {
+    width: tabvw(382.19px);
+    height: tabvw(307.11px);
+    left: tabvw(-151px);
+    top: tabvw(127px);
+    transform: translate(tabvw(-36px), 0px);
+    transform: rotate(15deg) translate(tabvw(-30px), tabvw(-45px));
+
+    @keyframes arm_shout_carmera {
+      0%,
+      100% {
+        transform: rotate(10deg) translate(tabvw(-40px), tabvw(-23px));
+      }
+
+      50% {
+        transform: translate(0, 0);
+      }
+    }
+
+    .camera {
+      width: tabvw(168px);
+      height: tabvw(154px);
+    }
+  }
+
+  .arm_r_up {
+    width: tabvw(116.59px);
+    height: tabvw(175.29px);
+
+    left: tabvw(-75px);
+    top: tabvw(140px);
+  }
+
+  .arm_r_down {
+    width: tabvw(212.6px);
+    height: tabvw(116.31px);
+    left: tabvw(-170px);
+    top: tabvw(238px);
+  }
+
+  .hand_r {
+    width: tabvw(103.71px);
+    height: tabvw(95.41px);
+    left: tabvw(-200px);
+    top: tabvw(205px);
+  }
+
+  .bag {
+    width: tabvw(236.43px);
+    height: tabvw(267.91px);
+    left: tabvw(30px);
+    top: tabvw(120px);
+  }
+
+  .bag_top {
+    width: tabvw(133.65px);
+    height: tabvw(143.98px);
+    left: tabvw(100px);
+    top: tabvw(40px);
+  }
+
+  @keyframes bag_move {
+    0%,
+    100% {
+      transform: translate(0, 0) rotate(0);
+    }
+    50% {
+      transform: translate(tabvw(18px), 0) rotate(-23deg);
+    }
+  }
+}
+
+@media (max-width: 768px) {
   .body_me {
     width: movw(183.51px);
     height: movw(211.56px);
@@ -187,6 +315,11 @@
       50% {
         transform: translate(0, 0);
       }
+    }
+
+    .camera {
+      width: movw(168px);
+      height: movw(154px);
     }
   }
 

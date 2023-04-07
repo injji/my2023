@@ -3,6 +3,7 @@
 .zzam_wrap {
   position: absolute;
   z-index: 1;
+  cursor: pointer;
 }
 
 .zzambbong {
@@ -106,7 +107,69 @@
   }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1023px) and (min-width: 769px) {
+  .zzam_wrap {
+    top: tabvw(400px);
+    left: tabvw(50px);
+  }
+
+  .zzambbong {
+    width: tabvw(222px);
+    height: tabvw(173px);
+    top: tabvw(50px);
+  }
+
+  .stick_wrap {
+    top: tabvw(8px);
+    left: tabvw(-8px);
+  }
+
+  .stick {
+    top: tabvw(5px);
+    left: tabvw(-5px);
+
+    em {
+      width: tabvw(118.86px);
+      height: tabvw(70.65px);
+      left: tabvw(10px);
+    }
+  }
+
+  .men {
+    border-left: tabvw(3px) solid #000;
+    border-top: tabvw(3px) solid #000;
+    top: tabvw(8px);
+    left: tabvw(90px);
+
+    span {
+      width: tabvw(5px);
+      height: tabvw(100px);
+      border-right: tabvw(3px) solid #000;
+    }
+  }
+
+  @keyframes ramem_up {
+    0%,
+    100% {
+      transform: translate(tabvw(10px), tabvw(25px));
+    }
+    50% {
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes ramem_leng {
+    0%,
+    100% {
+      height: tabvw(70px);
+    }
+    50% {
+      height: tabvw(100px);
+    }
+  }
+}
+
+@media (max-width: 768px) {
   .zzam_wrap {
     top: movw(400px);
     left: movw(50px);

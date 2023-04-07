@@ -23,8 +23,15 @@
   animation: cat_tail 2s ease infinite;
 }
 
+.clicknabong {
+  position: absolute;
+  z-index: 15;
+  cursor: pointer;
+}
+
 @media (min-width: 1024px) {
-  .nabong {
+  .nabong,
+  .clicknabong {
     width: pcvw(152.7px);
     height: pcvw(101.25px);
     left: pcvw(-120px);
@@ -60,8 +67,47 @@
   }
 }
 
-@media (max-width: 1023px) {
-  .nabong {
+@media (max-width: 1023px) and (min-width: 769px) {
+  .nabong,
+  .clicknabong {
+    width: tabvw(152.7px);
+    height: tabvw(101.25px);
+    left: tabvw(-120px);
+    top: tabvw(280px);
+  }
+
+  .eyes {
+    column-gap: tabvw(15px);
+    top: tabvw(23px);
+    left: tabvw(30px);
+
+    span {
+      width: tabvw(6px);
+      height: tabvw(6px);
+    }
+  }
+
+  .c_tail {
+    width: tabvw(74.67px);
+    height: tabvw(46.94px);
+    left: tabvw(75px);
+    top: tabvw(63px);
+  }
+
+  @keyframes cat_tail {
+    0%,
+    100% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(-30deg) translate(tabvw(5px), tabvw(10px));
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .nabong,
+  .clicknabong {
     width: movw(152.7px);
     height: movw(101.25px);
     left: movw(-120px);

@@ -8,25 +8,22 @@
   @return ($target/$vw-context) * 1vh;
 }
 
+@function tabvw($target) {
+  $vw-context: (1500 * 0.01) * 1px;
+  @return ($target/$vw-context) * 1vw;
+}
+
+@function tabvh($target) {
+  $vw-context: (1500 * 0.01) * 1px;
+  @return ($target/$vw-context) * 1vh;
+}
+
 @function movw($target) {
-    $vw-context: (1200 * 0.01) * 1px;
-    @return ($target/$vw-context) * 1vw;
-  }
-  
-  @function movh($target) {
-    $vw-context: (1200 * 0.01) * 1px;
-    @return ($target/$vw-context) * 1vh;
-  }
+  $vw-context: (1000 * 0.01) * 1px;
+  @return ($target/$vw-context) * 1vw;
+}
 
-// @media (max-width: 1024px) {
-//   $vw-viewport: 1728;
-// }
-
-// @media (min-width: 768px) and (max-width: 1023px) {
-//   $vw-viewport: 900;
-// }
-
-// @media (max-width: 767px) {
-//   $vw-viewport: 500;
-// }
-
+@function movh($target) {
+  $vw-context: (1000 * 0.01) * 1px;
+  @return ($target/$vw-context) * 1vh;
+}

@@ -6,7 +6,6 @@
 
   .san1 {
     position: absolute;
-    
   }
   .san2 {
     position: absolute;
@@ -33,7 +32,26 @@
   }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1023px) and (min-width: 769px) {
+  .mountain_wrap {
+    top: tabvw(25px);
+    left: tabvw(235px);
+  }
+
+  .san1 {
+    width: tabvw(376.8px);
+    height: tabvw(387.17px);
+  }
+
+  .san2 {
+    top: tabvw(98px);
+    left: tabvw(260px);
+    width: tabvw(248.9px);
+    height: tabvw(291.76px);
+  }
+}
+
+@media (max-width: 768px) {
   .mountain_wrap {
     top: movw(25px);
     left: movw(235px);

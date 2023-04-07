@@ -31,12 +31,30 @@
   .l_leg {
     width: pcvw(453.52px);
     height: pcvw(224.85px);
-    
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 769px) {
+  .leg_wrap {
+    left: tabvw(-180px);
+    top: tabvw(340px);
+  }
+
+  .r_leg {
+    width: tabvw(344.32px);
+    height: tabvw(304.39px);
+    left: tabvw(-100px);
+    top: tabvw(-125px);
+  }
+
+  .l_leg {
+    width: tabvw(453.52px);
+    height: tabvw(224.85px);
   }
 }
 
 // 태블릿, 모바일버전
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .leg_wrap {
     left: movw(-180px);
     top: movw(340px);

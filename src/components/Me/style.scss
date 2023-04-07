@@ -16,7 +16,14 @@ img {
   }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1023px) and (min-width: 769px) {
+  .my_me {
+    left: tabvw(441px);
+    top: tabvw(140px);
+  }
+}
+
+@media (max-width: 768px) {
   .my_me {
     left: movw(441px);
     top: movw(140px);

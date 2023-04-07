@@ -102,7 +102,72 @@
   }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1023px) and (min-width: 769px) {
+  .big_leaf {
+    width: tabvw(352px);
+    height: tabvw(377px);
+    top: tabvw(250px);
+    left: tabvw(100px);
+  }
+
+  .right_bg {
+    top: tabvw(50px);
+    left: tabvw(400px);
+
+    .big_leaf {
+      top: tabvw(160px);
+      left: tabvw(80px);
+    }
+
+    .s_leaf1 {
+      width: tabvw(113px);
+      height: tabvw(136px);
+      top: tabvw(380px);
+      left: tabvw(330px);
+    }
+
+    .s_leaf2 {
+      width: tabvw(127px);
+      height: tabvw(127px);
+      top: tabvw(430px);
+      left: tabvw(330px);
+    }
+  }
+
+  .dumble {
+    .dumble1 {
+      width: tabvw(257.19px);
+      height: tabvw(141.73px);
+      top: tabvw(580px);
+      left: tabvw(280px);
+    }
+
+    .dumble2 {
+      width: tabvw(80.89px);
+      height: tabvw(50.56px);
+      top: tabvw(680px);
+      left: tabvw(120px);
+    }
+
+    .dumble3 {
+      width: tabvw(198.43px);
+      height: tabvw(109.35px);
+      transform: scaleX(-1);
+      top: tabvw(500px);
+      left: tabvw(600px);
+    }
+
+    .dumble4 {
+      width: tabvw(55.31px);
+      height: tabvw(34.57px);
+      transform: scaleX(-1);
+      top: tabvw(680px);
+      left: tabvw(600px);
+    }
+  }
+}
+
+@media (max-width: 768px) {
   .big_leaf {
     width: movw(352px);
     height: movw(377px);

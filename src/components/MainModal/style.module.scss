@@ -1,0 +1,230 @@
+@import "../../common/getvw.scss";
+
+.modal_wrap {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 16;
+  opacity: 0;
+
+  &.act {
+    animation: show_modal 1s ease forwards;
+  }
+
+  &:hover {
+    h3 {
+      background: #fff;
+    }
+
+    em {
+      width: 100%;
+    }
+  }
+
+  p {
+    color: #000;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+
+    em {
+      width: 0;
+      height: 100%;
+
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      background: #f4f55b;
+      z-index: -1;
+      cursor: pointer;
+
+      transition: all 0.2s;
+    }
+  }
+
+  h3 {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50px;
+    font-weight: bold;
+    backdrop-filter: blur(2px);
+  }
+
+  .h3_wrap {
+    position: relative;
+
+    h3 {
+      width: max-content;
+      position: absolute;
+
+      &:hover {
+        background: #e1cef1;
+
+        &::after {
+          content: " GO";
+          cursor: pointer;
+        }
+      }
+    }
+
+    // span {
+    //   width: 100%;
+    //   position: absolute;
+    //   background: #e1cef1;
+    //   border-radius: 50px;
+    //   font-weight: bold;
+    //   backdrop-filter: blur(2px);
+    //   text-align: right;
+
+    //   z-index: -1;
+    //   opacity: 0;
+
+    //   // &:hover {
+    //   //   span {
+    //   //     right: -80%;
+    //   //   }
+    //   // }
+    // }
+  }
+}
+
+@media (min-width: 1024px) {
+  .modal_wrap {
+    &.flower {
+      transform: translate(pcvw(-450px), pcvw(-100px));
+    }
+
+    &.zzambbong {
+      transform: translate(pcvw(-500px), pcvw(250px));
+    }
+
+    &.shout {
+      transform: translate(pcvw(-50px), pcvw(50px));
+    }
+
+    &.nabong {
+      transform: translate(pcvw(-250px), pcvw(200px));
+    }
+
+    &.holiday {
+      transform: translate(pcvw(200px), pcvw(150px));
+    }
+
+    &.portfolio {
+      transform: translate(pcvw(300px), pcvw(-80px));
+    }
+
+    p {
+      font-size: pcvw(16px);
+      line-height: pcvw(20px);
+      padding: 0 pcvw(20px);
+      margin-bottom: pcvw(5px);
+    }
+
+    h3 {
+      height: pcvw(60px);
+      line-height: pcvw(66px);
+      border: pcvw(3px) solid #000;
+      padding: 0 pcvw(20px);
+
+      font-size: pcvw(25px);
+    }
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 769px) {
+  .modal_wrap {
+    &.flower {
+      transform: translate(tabvw(-450px), tabvw(-100px));
+    }
+
+    &.zzambbong {
+      transform: translate(tabvw(-500px), tabvw(250px));
+    }
+
+    &.shout {
+      transform: translate(tabvw(-50px), tabvw(50px));
+    }
+
+    &.nabong {
+      transform: translate(tabvw(-250px), tabvw(200px));
+    }
+
+    &.holiday {
+      transform: translate(tabvw(200px), tabvw(150px));
+    }
+
+    &.portfolio {
+      transform: translate(tabvw(300px), tabvw(-80px));
+    }
+
+    p {
+      font-size: tabvw(16px);
+      line-height: tabvw(20px);
+      padding: 0 tabvw(20px);
+      margin-bottom: tabvw(5px);
+    }
+
+    h3 {
+      height: tabvw(60px);
+      line-height: tabvw(66px);
+      border: tabvw(3px) solid #000;
+      padding: 0 tabvw(20px);
+
+      font-size: tabvw(25px);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .modal_wrap {
+    &.flower {
+      transform: translate(movw(-400px), movw(-100px));
+    }
+
+    &.zzambbong {
+      transform: translate(movw(-450px), movw(300px));
+    }
+
+    &.shout {
+      transform: translate(movw(-50px), movw(50px));
+    }
+
+    &.nabong {
+      transform: translate(movw(-250px), movw(200px));
+    }
+
+    &.holiday {
+      transform: translate(movw(100px), movw(150px));
+    }
+
+    &.portfolio {
+      transform: translate(movw(150px), movw(-80px));
+    }
+
+    p {
+      font-size: movw(16px);
+      line-height: movw(20px);
+      padding-left: movw(20px);
+      margin-bottom: movw(5px);
+    }
+
+    h3 {
+      height: movw(60px);
+      line-height: movw(66px);
+      border: movw(3px) solid #000;
+      padding: 0 movw(20px);
+
+      font-size: movw(25px);
+    }
+  }
+}
+
+@keyframes show_modal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
