@@ -99,7 +99,7 @@
                 background-color: #fcff92;
                 display: block;
 
-                animation: skill_bar 5s;
+                animation: skill_bar 3s;
               }
             }
           }
@@ -214,6 +214,12 @@
           margin-top: 10px;
         }
 
+        &:nth-child(5n) {
+          &::after{
+            display: none !important;
+          }
+        }
+
         &::after {
           content: "";
           width: 3px;
@@ -297,7 +303,7 @@
                 background-color: #fcff92;
                 display: block;
 
-                animation: skill_bar 5s;
+                animation: skill_bar 3s;
               }
             }
           }
@@ -412,6 +418,12 @@
           margin-top: 10px;
         }
 
+        &:nth-child(4n) {
+          &::after{
+            display: none !important;
+          }
+        }
+
         &::after {
           content: "";
           width: 3px;
@@ -498,7 +510,7 @@
                 background-color: #fcff92;
                 display: block;
 
-                animation: skill_bar 5s;
+                animation: skill_bar 3s;
               }
             }
           }
@@ -619,6 +631,7 @@
             display: none !important;
           }
         }
+
         &::after {
           content: "";
           width: 3px;
