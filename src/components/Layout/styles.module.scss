@@ -1,0 +1,31 @@
+.body_wrap {
+  width: 100vw;
+}
+
+@media (min-width: 1024px) {
+  .body_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+
+    section {
+      width: calc(100vw - 120px);
+    }
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 769px) {
+  .body_wrap {
+    section {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 769px) {
+  .body_wrap {
+    section {
+      width: 100%;
+    }
+  }
+}

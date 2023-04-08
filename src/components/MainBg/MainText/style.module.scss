@@ -14,7 +14,7 @@
 
 @media (min-width: 1024px) {
   .main_text {
-    width: pcvw(650px);
+    width: pcvw(630px);
     top: 50%;
     margin-top: pcvw(-430px);
 
@@ -27,7 +27,7 @@
 
 @media (max-width: 1023px) and (min-width: 769px) {
   .main_text {
-    width: tabvw(650px);
+    width: tabvw(630px);
     top: 50%;
     margin-top: tabvw(-450px);
 
@@ -40,12 +40,12 @@
 
 @media (max-width: 768px) {
   .main_text {
-    width: movw(540px);
+    width: movw(700px);
     top: 50%;
-    margin-top: movw(-400px);
+    margin-top: movw(-500px);
 
     p {
-      font-size: movw(24px);
+      font-size: movw(30px);
       line-height: movw(34px);
     }
   }

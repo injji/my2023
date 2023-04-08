@@ -11,9 +11,7 @@ const Main = () => {
   return (
     <div className={styles.main_page}>
       <MainText />
-      <button className={styles.menu}>
-        <img src={menu} />
-      </button>
+    
 
       <div className={styles.main_wrap}>
         {/* 캐릭터 */}

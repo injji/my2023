@@ -1,5 +1,5 @@
 import React from "react";
-import { atom, useAtom } from "jotai";
+import { useAtom } from "jotai";
 import {
   FlowerAtom,
   ZzambbongAtom,

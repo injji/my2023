@@ -2,7 +2,6 @@
 
 .main_page {
   width: 100vw;
-  height: 100vh;
 
   background-color: #f9f5ec;
 
@@ -21,8 +20,11 @@
   }
 }
 
-
 @media (min-width: 1024px) {
+  .main_page {
+    height: 100vh;
+  }
+
   .main_wrap {
     width: pcvw(930px);
     height: pcvw(730px);
@@ -38,6 +40,10 @@
 }
 
 @media (max-width: 1023px) and (min-width: 769px) {
+  .main_page {
+    height: calc(100vh - 80px);
+  }
+
   .main_wrap {
     width: tabvw(930px);
     height: tabvw(730px);
@@ -53,6 +59,10 @@
 }
 
 @media (max-width: 768px) {
+  .main_page {
+    height: calc(100vh - 50px);
+  }
+
   .main_wrap {
     width: movw(930px);
     height: movw(730px);

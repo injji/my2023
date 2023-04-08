@@ -19,11 +19,11 @@
 }
 
 @function movw($target) {
-  $vw-context: (1000 * 0.01) * 1px;
+  $vw-context: (1100 * 0.01) * 1px;
   @return ($target/$vw-context) * 1vw;
 }
 
 @function movh($target) {
-  $vw-context: (1000 * 0.01) * 1px;
+  $vw-context: (1100 * 0.01) * 1px;
   @return ($target/$vw-context) * 1vh;
 }
