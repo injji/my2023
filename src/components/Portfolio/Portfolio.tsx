@@ -1,5 +1,7 @@
 import React from "react";
-import PortfolioList from './PortfolioList';
+
+import PortfolieModal from "./PortfolioModal/PortfolieModal";
+import PortfolioList from "./PortfolioList";
 import styles from "./styles.module.scss";
 
 const Portfolio = () => {
@@ -8,6 +10,7 @@ const Portfolio = () => {
       <h1>Portfolio</h1>
 
       <PortfolioList />
+      <PortfolieModal />
     </div>
   );
 };
