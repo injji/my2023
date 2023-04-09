@@ -5,6 +5,8 @@ import Main from "./pages/Main/Main";
 import Layout from "./components/Layout/Layout";
 import About from "./components/About/About";
 import NotFound from "./components/NotFound/NotFound";
+import Career from './components/Career/Career';
+import Portfolio from './components/Portfolio/Portfolio';
 
 const App = () => {
   return (
@@ -15,7 +17,8 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Main />}></Route>
             <Route path="/about" element={<About />}></Route>
-            <Route path="/career" element={<About />}></Route>
+            <Route path="/career" element={<Career />}></Route>
+            <Route path="/portfolio" element={<Portfolio />}></Route>
             {/* 상단에 위치하는 라우트들의 규칙을 모두 확인, 일치하는 라우트가 없는경우 처리 */}
             <Route path="*" element={<NotFound />}></Route>
           </Routes>

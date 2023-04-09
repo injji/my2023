@@ -1,0 +1,111 @@
+[
+  {
+    "id": 1,
+    "project_name": "2023 포트폴리오",
+    "project_docs": "2023년에 제작된 포트폴리오 전용 웹사이트입니다.",
+    "project_img": "port2023.png",
+    "skill": [
+      "React",
+      "Typescript",
+      "SCSS",
+      "Jotai",
+      "HTML",
+      "CSS",
+      "Javascript",
+      "GitHub",
+      "figma"
+    ],
+    "date": "23.03 ~ 23.04"
+  },
+  {
+    "id": 2,
+    "project_name": "colorverse",
+    "project_docs": "메타버스 기반의 게임 앱으로 23년 중에 오픈될 예정입니다.",
+    "project_img": "colorverse.png",
+    "skill": [
+      "React",
+      "Typescript",
+      "SCSS",
+      "AWS",
+      "Jotai",
+      "HTML",
+      "CSS",
+      "Javascript",
+      "Unity",
+      "GitLab"
+    ],
+    "date": "22.12 ~ 진행중"
+  },
+  {
+    "id": 3,
+    "project_name": "하루 한푼",
+    "project_docs": "[개인 프로젝트] 하루에 사용할 수 있는 금액을 자동으로 계산해주는 저축 앱입니다.",
+    "project_img": "card.jpg",
+    "skill": ["React", "HTML", "CSS", "Javascript", "GitHub", "figma"],
+    "date": "22.09 ~ 22.09"
+  },
+  {
+    "id": 4,
+    "project_name": "byapps 바이앱스 관리자",
+    "project_docs": "신사업인 맵스 트렌드 서비스 관련하여 제작된 관리용 웹페이지입니다. ",
+    "project_img": "byapp1.jpg",
+    "skill": ["Laravel", "HTML", "CSS", "Javascript", "GitLab", "figma"],
+    "date": "22.05 ~ 22.06"
+  },
+  {
+    "id": 5,
+    "project_name": "MAPS TREND",
+    "project_docs": "신사업 홍보 마케팅용 웹페이지, 맵스 트렌드입니다. ",
+    "project_img": "maps.png",
+    "skill": ["Laravel", "HTML", "CSS", "Javascript", "GitLab", "figma"],
+    "date": "21.11 ~ 22.02"
+  },
+  {
+    "id": 6,
+    "project_name": "Manimon",
+    "project_docs": "협력사의 홍보 마케팅용 웹페이지, manimon입니다. ",
+    "project_img": "manim2.png",
+    "skill": ["Laravel", "HTML", "CSS", "Javascript", "GitLab"],
+    "date": "22.06 ~ 22.09"
+  },
+  {
+    "id": 7,
+    "project_name": "프렌즈 메타버스",
+    "project_docs": "메타버스 홍보용 웹사이트와 B2B용 어플입니다.",
+    "project_img": "meta.gif",
+    "skill": ["Gnuboard", "HTML", "CSS", "Javascript", "GitHub", "figma"],
+    "date": "21.08 ~ 21.10"
+  },
+  {
+    "id": 8,
+    "project_name": "악기해바라상가",
+    "project_docs": "우리 주변의 악기를 알리고 판매하는 종합 악기 쇼핑몰입니다.",
+    "project_img": "ak.gif",
+    "skill": [
+      "Gnuboard",
+      "HTML",
+      "CSS",
+      "Javascript",
+      "Godomall",
+      "GitHub",
+      "figma"
+    ],
+    "date": "21.01 ~ 21.06"
+  },
+  {
+    "id": 9,
+    "project_name": "동네몰",
+    "project_docs": "우리 동네의 음식점을 홍보하고 소비자는 쿠폰을 통해 저렴하게 구매할 수 있는 플랫폼 앱",
+    "project_img": "dong.gif",
+    "skill": ["Gnuboard", "HTML", "CSS", "Javascript", "GitHub", "AdobePhotoShop"],
+    "date": "20.07 ~ 20.11"
+  },
+  {
+    "id": 10,
+    "project_name": "오가나 피부과 의원",
+    "project_docs": "오가나 피부과 의원의 홈페이지입니다.",
+    "project_img": "oh.gif",
+    "skill": ["Gnuboard", "HTML", "CSS", "Javascript", "AdobePhotoShop"],
+    "date": "20.10 ~ 21.01"
+  }
+]
