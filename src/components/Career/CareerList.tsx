@@ -122,8 +122,8 @@ const CareerList = () => {
               <ol>
                 <li>{item.docs}</li>
                 <SkillSet>
-                  {item.skill.map((it) => (
-                    <em>{it}</em>
+                  {item.skill.map((it, index) => (
+                    <em key={index}>{it}</em>
                   ))}
                 </SkillSet>
               </ol>
@@ -216,7 +216,6 @@ const SkillSet = styled.li`
   align-items: center;
   flex-wrap: wrap;
   gap: 5px;
-  
 
   em {
     font-size: 16px;
