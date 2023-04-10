@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Image from "react-image-webp";
 import { Link } from "react-router-dom";
 import { useAtom } from "jotai";
 import { PortModalAtom, PortContentAtom } from "../../../store/StorePage";
@@ -85,7 +86,10 @@ const PortfolieModal = () => {
                 </ul>
 
                 {/* 프로젝트 이미지 슬라이더 */}
-                <SwiperImg ProjectImg={item.project_img} />
+                <SwiperImg
+                  ProjectImg={item.project_img}
+                  ProjectVideo={item.project_video}
+                />
 
                 <div className={styles.project_txt}>
                   <h3>프로젝트를 시작하기 전 고려한 점</h3>
@@ -99,6 +103,20 @@ const PortfolieModal = () => {
                   <h3>프로젝트의 진행과 결과</h3>
                   <p>{item.project_result}</p>
                 </div>
+
+                <ol>
+                  {item.etc_imgs &&
+                    item.etc_imgs.map((etc, index) => {
+                      return (
+                        <li key={index}>
+                          <Image
+                            webp={`${process.env.PUBLIC_URL}/image/webp/${etc}`}
+                            alt={etc}
+                          />
+                        </li>
+                      );
+                    })}
+                </ol>
               </div>
             );
           })}

@@ -29,19 +29,19 @@ const MainAniBtn = () => {
   return (
     <div className={styles.ani_btn}>
       <button onClick={handlehollyModal} disabled={hollyModal}>
-        쉬는날에는?
+        쉬는 날?
       </button>
       <button onClick={handlehobbitModal} disabled={hobbitModal}>
-        선택적 특기는?
+        나의 특기?
       </button>
       <button onClick={handlezzambbongModal} disabled={zzambbongModal}>
-        소소한 취미는?
+        소소한 취미?
       </button>
       <button onClick={handlenabongModal} disabled={nabongModal}>
-        모시는 주인님은?
+        나봉쨩?
       </button>
       <button onClick={handleflowerModal} disabled={flowerModal}>
-        좋아하는 향기는?
+        스멜 굿!
       </button>
       <button onClick={handlewindowModal}>포트폴리오!?</button>
     </div>

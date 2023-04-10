@@ -4,10 +4,10 @@ import MainAniBtn from "./MainAniBtn";
 
 import styles from "./styles.module.scss";
 
-import menu1 from "../../assets/image/icon/nav1.png";
-import menu2 from "../../assets/image/icon/nav2.png";
-import menu3 from "../../assets/image/icon/nav3.png";
-import menu4 from "../../assets/image/icon/nav4.png";
+import menu1 from "../../assets/image/icon/nav1.svg";
+import menu2 from "../../assets/image/icon/nav2.svg";
+import menu3 from "../../assets/image/icon/nav3.svg";
+import menu4 from "../../assets/image/icon/nav4.svg";
 
 const Menu = () => {
   /** 현재 url 파악을 위함 */
@@ -25,30 +25,30 @@ const Menu = () => {
         <ul>
           <li>
             <Link to="./about">
-              <img src={menu1} />
+              <img src={menu1} alt="menu_icon" />
               <p>지인 이야기</p>
             </Link>
           </li>
           <li>
             <Link to="./career">
-              <img src={menu2} />
-              <p>경력 기술서</p>
+              <img src={menu2} alt="menu_icon" />
+              <p>경력 리스트</p>
             </Link>
           </li>
           <li>
             <Link to="./portfolio">
-              <img src={menu3} />
+              <img src={menu3} alt="menu_icon" />
               <p>포트폴리오</p>
             </Link>
           </li>
           <li>
-            <img src={menu4} />
+            <img src={menu4} alt="menu_icon" />
             <p>문의해보기</p>
           </li>
         </ul>
       </nav>
 
-      {url === '/' && <MainAniBtn />}
+      {url === "/" && <MainAniBtn />}
     </div>
   );
 };

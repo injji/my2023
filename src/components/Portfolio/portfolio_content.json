@@ -2,7 +2,8 @@
   {
     "id": 1,
     "project_name": "2023 포트폴리오",
-    "project_img": ["port1.jpg", "port2023.png"],
+    "project_video": [],
+    "project_img": ["port1.webp", "port2023.webp"],
     "skill": [
       "React",
       "Typescript",
@@ -18,13 +19,15 @@
     "position": ["기획", "디자인", "퍼블리싱", "프론트엔드"],
     "giturl": "https://github.com/injji/my2023",
     "figmaurl": "https://www.figma.com/file/rZJIMsUqztYHT5Uu0L0362/2023-%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4?node-id=0%3A1&t=s9AcOcSvjOWphk3L-1",
+    "etc_imgs": ["port.webp"],
     "project_think": "이번 포트폴리오에서는 특히나 고려한 세가지의 사항이 있습니다. \n첫번째는 밝은 색채를 좋아하고 취향이 뚜렷한 '나'라는 사람이 잘 드러나야 할 것, \n두번째는 햄버거 메뉴처럼 사용자가 두뎁스로 웹을 구경하는 것을 피하고 컨텐츠들을 한눈에 보여주어야 할 것, \n마지막 세번째는 포트폴리오의 팝업창 디자인이 맥의 웹 컨셉이라도 모바일과 태블릿에서는 닫기가 오른쪽에 오는 것처럼 사용자의 편의를 최대한으로 맞출 것 입니다. \n그리고 당연하게 미디어쿼리를 이용한 반응형 웹으로 제작하기로 결정했습니다. \n\n",
-    "project_result": "메인에 애니메이션이 많다보니 pc, 태블릿, 모바일의 3개의 크기 만으로는 각각의 맞는 디바이스별 적정크기를 정하기가 어려웠습니다. 그래서 get-vw를 도입했고 'width별 px을 vw로 변환'하여 좀 더 세밀하게 크기를 조절할 수 있었습니다. \n또한 컴포넌트별 요소들을 나누다보니 메인에서 일어나는 click 이벤트가 많아졌습니다. 그래서 상태관리로는 redux 보다 좀 더 간편한 jotai를 채택하였고 상태관리용 store.ts 파일을 만들어 메인, 서브로 각각 관리하기로 했습니다. \nDB가 필요했던 경력리스트, 포트폴리오 리스트, 모달 팝업의 내용들은 json파일로 모아두어 반복되는 소스코드들을 줄이고 각각 관리할 수 있게 했습니다."
+    "project_result": "메인에 애니메이션이 많다보니 pc, 태블릿, 모바일의 3개의 크기 만으로는 각각의 맞는 디바이스별 적정크기를 정하기가 어려웠습니다. 그래서 get-vw를 도입했고 'width별 px을 vw로 변환'하여 좀 더 세밀하게 크기를 조절할 수 있었습니다. \n또한 컴포넌트별 요소들을 나누다보니 메인에서 일어나는 click 이벤트가 많아졌습니다. 그래서 상태관리로는 redux 보다 좀 더 간편한 jotai를 채택하였고 상태관리용 store.ts 파일을 만들어 메인, 서브로 각각 관리하기로 했습니다. \nDB가 필요했던 경력리스트, 포트폴리오 리스트, 모달 팝업의 내용들은 json파일로 모아두어 반복되는 소스코드들을 줄이고 각각 관리할 수 있게 했습니다. \n모든 코드들을 넣고 성능을 확인했을 때 대부분 'png, jpg, gif' 같이 이미지 파일로 인한 성능저하가 이루어졌고 각각 'webm, webp'파일로 변환하여 아래와 같은 성능으로 포폴을 완료할 수 있었습니다.\n\n"
   },
   {
     "id": 2,
     "project_name": "Colorverse",
-    "project_img": ["port1.jpg", "port2023.png"],
+    "project_video": [],
+    "project_img": ["port1.webp", "port2023.webp"],
     "skill": [
       "React",
       "Typescript",
@@ -42,79 +45,91 @@
     "position": ["퍼블리싱", "프론트엔드"],
     "giturl": "",
     "figmaurl": "",
-    "project_think": "프로젝트 설명 글이 들어갑니다.",
-    "project_result": "프로젝트 설명 글이 들어갑니다."
+    "etc_imgs": ["atomic.webp"],
+    "project_think": "메타버스용 컬러버스 앱을 제가 맡기 시작했을 땐, React를 알지 못하는 외주 퍼블리셔에게 코드파일을 받고 나서의 일이었습니다. 어떠한 클릭 이벤트나 이동 없이 html,css의 한 화면으로만 이루어져 있었고 한 파일에 모든 css가 전부 들어있어 가독성 또한 좋지 않았습니다. \n코드를 보고 나서 일의 순서를 정했는데 제일 먼저는 컴포넌트를 분리하고 css를 컴포넌트 별로 분리, 그 다음에는 React의 Hook을 사용한 onclick 이벤트 및 상태변화 적용, 이후에는 map()을 사용한 반복작업 분리 등 큰 틀부터 작은 틀까지 잡아가며 정리를 하고 본격적인 프로젝트에 들어갔습니다.",
+    "project_result": "각 페이지, 테마 별로 상태관리가 필요하여 jotai를 적용하고 이번 프로젝트에는 특별하게 atomic design 방식을 사용해보았습니다. 'core, module, organisms'의 세타입으로 압축정리 및 type을 정의하여 요소별로 재사용 컴포넌트들을 만들었습니다. typescript에서는 타입을 정해줘야하는데 atomic 방식을 적용하니, 실 코드에서 타입으로 인해 코드가 지저분해지지 않아서 만족스러웠습니다. \n\n특히나 프로젝트에서 큰 이슈가 있었던 것은 '앱을 사용하는 사용자가 버튼의 크기나, 색, 형태 등을 커스텀할 수 있다'는 것이었습니다. 관리자 페이지에서 크기, 색, 형태들을 서버로 받아와서 atomic 방식에 옵션들로 설정해놓는 것으로 방향을 정할 수 있었습니다. \n\n이 다음으로는 사용자의 제스쳐에 맞춰서 하단 아이템 부분의 높이가 변경되는데 'react-modal-sheet'을 사용한 라이브러리가 안의 요소의 scrollbar의 생성을 막는 이슈가 있었습니다. 처음에 scroll이 되더라도 제스쳐를 사용하여 높이를 조정하는 순간부터 scroll이 되지 않았는데 스크롤을 잡아줄 수 있는 'react-custom-scrollbars'를 활용하여 해당 이슈를 해결할 수 있었습니다. \n\n"
   },
   {
     "id": 3,
     "project_name": "하루 한푼",
+    "project_video": [],
     "project_img": [
-      "card1.jpg",
-      "card2.jpg",
-      "card3.jpg",
-      "card4.jpg",
-      "card5.jpg"
+      "card1.webp",
+      "card2.webp",
+      "card3.webp",
+      "card4.webp",
+      "card5.webp"
     ],
     "skill": ["React", "HTML", "CSS", "Javascript", "GitHub", "figma"],
     "date": "22.09 ~ 22.09",
     "position": ["기획", "디자인", "퍼블리싱", "프론트엔드"],
     "giturl": "https://github.com/injji/Haru",
-    "figmaurl": "",
-    "project_think": "프로젝트 설명 글이 들어갑니다.",
-    "project_result": "프로젝트 설명 글이 들어갑니다."
+    "figmaurl": "https://www.figma.com/file/nHFx75yAfrTSufDk790PtZ/%ED%95%98%EB%A3%A8%ED%95%9C%ED%91%BC?node-id=104%3A697&t=cpl8uprqfiv3asj6-1",
+    "etc_imgs": ["haru3.webp","haru4.webp","haru5.webp","haru6.webp"],
+    "project_think": "리액트를 배우고 나서 처음 시도해보는 개인프로젝트입니다. \n먼저 '하루 한푼'이라는 프로젝트의 주제는, 원하는 날짜까지 목표 금액을 쓰자! 라는 것이고 20일 동안 40만원의 목표액을 적용한다면 하루에 2만원씩 쓸 수 있는데 하루에 쓸 수 있는 금액보다 적게 또는 많게 사용했다면 남은 금액은 남은 일 수에 맞춰서 자동으로 하루에 쓸 수 있는 금액이 계산되는 절약 앱입니다. \n\n디자인 컨셉은 토스앱을 레퍼런스로 잡고 기능을 중점으로 둔 앱 느낌의 심플한 디자인입니다. \n이 프로젝트의 기술적인 목표는 React의 Hook을 최대한 사용해보는 것이었습니다.\n\n",
+    "project_result": "앱의 DB는 localstorage로 페이지 간의 정보를 전달 & 저장하였습니다.\n\n이 프로젝트를 하면서 가장 신경을 쓴 것은 카드의 커스텀 기능과 하루에 쓸 금액을 계산해주는 기능이었습니다.\n\n당시 교과서나 수능문제집을 활용하여 연예인의 사진을 넣던가 좋아하는 그림들을 넣는 유행이 있었는데 이것에서 아이디어를 얻어, 카드의 색 뿐만 아니라 이미지 첨부파일을 활용하여 앱 내의 카드를 커스텀 할 수 있도록 기능을 넣어놓았습니다. \n\n계산 기능은 시작 날짜부터 끝나는 날짜까지의 일 수를 저장하고 목표금액에서 일 수를 나눠 하루에 쓸 수 있는 금액을 계산하도록 설정했습니다. \n가장 애먹었던 것은 하루에 쓸 수 있는 금액에서 사용한 금액만큼 하루 백분률로 나타내고 일 수가 변경 될 때마다 남은 금액에서 전체 백분률로 나타냈던 일이었습니다. useEffect hook을  사용하여 데이터가 변경될 때마다 로컬에 정보를 저장하여 계산하도록 설정했습니다. \n\n 당시에 상태관리에 대해 무지한 상태로 프로젝트를 제작했는데 상태관리 툴을 사용했다면 더 편하게 작업이 가능했을 것 같아 아쉬운 마음이 있습니다."
   },
   {
     "id": 4,
     "project_name": "byapps 바이앱스 관리자",
-    "project_img": ["byapp1.jpg", "byapp2.jpg"],
+    "project_video": [],
+    "project_img": ["byapp1.webp", "byapp2.webp"],
     "skill": ["Laravel", "HTML", "CSS", "Javascript", "GitLab", "figma"],
     "date": "22.05 ~ 22.06",
     "position": ["퍼블리싱", "프론트엔드"],
     "giturl": "",
     "figmaurl": "",
+    "etc_imgs": [],
     "project_think": "프로젝트 설명 글이 들어갑니다.",
     "project_result": "프로젝트 설명 글이 들어갑니다."
   },
   {
     "id": 5,
     "project_name": "MAPS TREND",
-    "project_img": ["maps.png"],
+    "project_video": [],
+    "project_img": ["maps.webp"],
     "skill": ["Laravel", "HTML", "CSS", "Javascript", "GitLab", "figma"],
     "date": "21.11 ~ 22.02",
     "position": ["퍼블리싱"],
     "giturl": "",
     "figmaurl": "",
+    "etc_imgs": [],
     "project_think": "프로젝트 설명 글이 들어갑니다.",
     "project_result": "프로젝트 설명 글이 들어갑니다."
   },
   {
     "id": 6,
     "project_name": "Manimon",
-    "project_img": ["manim2.png"],
+    "project_video": [],
+    "project_img": ["manim2.webp"],
     "skill": ["Laravel", "HTML", "CSS", "Javascript", "GitLab"],
     "date": "22.06 ~ 22.09",
     "position": ["퍼블리싱"],
     "giturl": "",
     "figmaurl": "",
+    "etc_imgs": [],
     "project_think": "프로젝트 설명 글이 들어갑니다.",
     "project_result": "프로젝트 설명 글이 들어갑니다."
   },
   {
     "id": 7,
     "project_name": "프렌즈 메타버스",
-    "project_img": ["meta.gif"],
+    "project_video": ["meta.webm"],
+    "project_img": [],
     "skill": ["Gnuboard", "HTML", "CSS", "Javascript", "GitHub", "figma"],
     "date": "21.08 ~ 21.10",
     "position": ["기획", "디자인", "퍼블리싱"],
     "giturl": "",
     "figmaurl": "",
+    "etc_imgs": [],
     "project_think": "프로젝트 설명 글이 들어갑니다.",
     "project_result": "프로젝트 설명 글이 들어갑니다."
   },
   {
     "id": 8,
     "project_name": "악기해바라상가",
-    "project_img": ["ak.gif"],
+    "project_video": ["ak.webm"],
+    "project_img": [],
     "skill": [
       "Gnuboard",
       "HTML",
@@ -128,13 +143,15 @@
     "position": ["기획", "디자인", "퍼블리싱", "프론트엔드"],
     "giturl": "",
     "figmaurl": "",
+    "etc_imgs": [],
     "project_think": "프로젝트 설명 글이 들어갑니다.",
     "project_result": "프로젝트 설명 글이 들어갑니다."
   },
   {
     "id": 9,
     "project_name": "동네몰",
-    "project_img": ["dong.gif"],
+    "project_video": ["dong.webm"],
+    "project_img": [],
     "skill": [
       "Gnuboard",
       "HTML",
@@ -147,18 +164,21 @@
     "position": ["기획", "디자인", "퍼블리싱"],
     "giturl": "",
     "figmaurl": "",
+    "etc_imgs": [],
     "project_think": "프로젝트 설명 글이 들어갑니다.",
     "project_result": "프로젝트 설명 글이 들어갑니다."
   },
   {
     "id": 10,
     "project_name": "오가나 피부과 의원",
-    "project_img": ["oh.gif"],
+    "project_video": ["oh.webm"],
+    "project_img": [],
     "skill": ["Gnuboard", "HTML", "CSS", "Javascript", "AdobePhotoShop"],
     "date": "20.10 ~ 21.01",
     "position": ["퍼블리싱", "프론트엔드"],
     "giturl": "",
     "figmaurl": "",
+    "etc_imgs": [],
     "project_think": "프로젝트 설명 글이 들어갑니다.",
     "project_result": "프로젝트 설명 글이 들어갑니다."
   }

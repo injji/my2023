@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "react-image-webp";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper";
@@ -10,9 +11,10 @@ import styled from "styled-components";
 
 interface PortShowProps {
   ProjectImg: string[];
+  ProjectVideo: string[];
 }
 
-const SwiperImg = ({ ProjectImg }: PortShowProps) => {
+const SwiperImg = ({ ProjectImg, ProjectVideo }: PortShowProps) => {
   return (
     <SwiperWrap
       autoplay={{
@@ -22,11 +24,31 @@ const SwiperImg = ({ ProjectImg }: PortShowProps) => {
       modules={[Pagination, Autoplay]}
       pagination={true}
     >
+      {ProjectVideo.map((videoImg, index) => {
+        return (
+          videoImg && (
+            <SliderDiv key={index}>
+              <video autoPlay muted loop height={500}>
+                <source
+                  src={`${process.env.PUBLIC_URL}/image/webp/${videoImg}`}
+                  type="video/webm"
+                />
+              </video>
+            </SliderDiv>
+          )
+        );
+      })}
+
       {ProjectImg.map((item, index) => {
         return (
-          <SliderDiv key={index}>
-            <img src={`${process.env.PUBLIC_URL}/image/${item}`} alt={item} />
-          </SliderDiv>
+          ProjectImg && (
+            <SliderDiv key={index}>
+              <img
+                src={`${process.env.PUBLIC_URL}/image/webp/${item}`}
+                alt={item}
+              />
+            </SliderDiv>
+          )
         );
       })}
     </SwiperWrap>
@@ -44,8 +66,7 @@ const SwiperWrap = styled(Swiper)`
 
   @media (max-width: 769px) {
     height: 250px;
-
-}
+  }
 `;
 const SliderDiv = styled(SwiperSlide)`
   background-color: #f9f9f9;

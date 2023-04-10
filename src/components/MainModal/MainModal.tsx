@@ -10,6 +10,7 @@ import {
 } from "../../store/StoreMain";
 
 import styles from "./style.module.scss";
+import { Link } from 'react-router-dom';
 
 const MainModal = () => {
   const [flowerModal] = useAtom(FlowerAtom);
@@ -91,7 +92,7 @@ const MainModal = () => {
           나의 모든 이야기 <em></em>
         </p>
         <div className={styles.h3_wrap}>
-          <h3>궁금한 이야기 K.</h3> 
+          <Link to="/portfolio"><h3>궁금한 이야기 K.</h3> </Link> 
           {/* <span>GO</span> */}
         </div>
       </div>
