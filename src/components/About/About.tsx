@@ -1,6 +1,6 @@
 import React from "react";
+import Image from "react-image-webp";
 
-import jiin from "../../assets/image/page/about.jpg";
 import Charactor from "./Charactor";
 import Skill from "./Skill";
 import ToolSkill from "./ToolSkill";
@@ -15,7 +15,10 @@ const About = () => {
 
         <div className={styles.myself}>
           <div className={styles.jiin}>
-            <img src={jiin} alt="지인" />
+            <Image
+              webp={require("../../assets/image/page/about.webp")}
+              alt="지인"
+            />
           </div>
 
           <Skill />

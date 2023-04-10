@@ -16,7 +16,7 @@ const SwiperImg = ({ ProjectImg }: PortShowProps) => {
   return (
     <SwiperWrap
       autoplay={{
-        delay: 3000,
+        delay: 4000,
         disableOnInteraction: false,
       }}
       modules={[Pagination, Autoplay]}
@@ -44,7 +44,7 @@ const SwiperWrap = styled(Swiper)`
 
   @media (max-width: 769px) {
     height: 250px;
-    
+
 }
 `;
 const SliderDiv = styled(SwiperSlide)`

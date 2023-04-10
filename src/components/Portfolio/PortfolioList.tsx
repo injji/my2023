@@ -1,6 +1,7 @@
 import React from "react";
 import { useAtom } from "jotai";
 import { PortModalAtom, PortContentAtom } from "../../store/StorePage";
+import Image from "react-image-webp";
 
 import PortList from "./portfolio_list.json";
 
@@ -24,10 +25,21 @@ const PortfolioList = () => {
         return (
           <li key={item.id} onClick={() => handelPortModal(item.id)}>
             <div className="img">
-              <img
-                src={`${process.env.PUBLIC_URL}/image/${item.project_img}`}
-                alt={item.project_name}
-              />
+              {item.project_img && (
+                <Image
+                  webp={`${process.env.PUBLIC_URL}/image/webp/${item.project_img}`}
+                  alt={item.project_name}
+                />
+              )}
+
+              {item.project_video && (
+                <video autoPlay muted loop height={210}>
+                  <source
+                    src={`${process.env.PUBLIC_URL}/image/webp/${item.project_video}`}
+                    type="video/webm"
+                  />
+                </video>
+              )}
             </div>
             <div className="port_content">
               <h3>{item.project_name}</h3>

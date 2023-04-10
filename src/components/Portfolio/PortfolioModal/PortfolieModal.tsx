@@ -66,12 +66,17 @@ const PortfolieModal = () => {
                     })}
                   </li>
 
+                  <li>
+                    <span>프로젝트 기간</span>
+                    <span>{item.date}</span>
+                  </li>
+
                   {/* git 링크 없으면 보이지 않게 */}
                   {item.giturl ? (
                     <li>
                       <span>GitUrl</span>
                       <Link to={item.giturl} target="_blank">
-                        {item.giturl}
+                        Git 소스 보러 가기
                       </Link>
                     </li>
                   ) : (
@@ -83,8 +88,16 @@ const PortfolieModal = () => {
                 <SwiperImg ProjectImg={item.project_img} />
 
                 <div className={styles.project_txt}>
-                  <h3>프로젝트 소개</h3>
-                  <p>{item.project}</p>
+                  <h3>프로젝트를 시작하기 전 고려한 점</h3>
+                  <p>{item.project_think}</p>
+                  {item.figmaurl && (
+                    <Link to={item.figmaurl}>Figma 디자인 보러가기</Link>
+                  )}
+                </div>
+
+                <div className={styles.project_txt}>
+                  <h3>프로젝트의 진행과 결과</h3>
+                  <p>{item.project_result}</p>
                 </div>
               </div>
             );
