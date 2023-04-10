@@ -89,15 +89,7 @@
     "project_docs": "우리 주변의 악기를 알리고 판매하는 종합 악기 쇼핑몰입니다.",
     "project_video": "ak.webm",
     "project_img": "",
-    "skill": [
-      "Gnuboard",
-      "HTML",
-      "CSS",
-      "Javascript",
-      "Godomall",
-      "GitHub",
-      "figma"
-    ],
+    "skill": ["HTML", "CSS", "Javascript", "Godomall", "GitHub", "figma"],
     "date": "21.01 ~ 21.06"
   },
   {
@@ -106,7 +98,14 @@
     "project_docs": "우리 동네의 음식점을 홍보하고 소비자는 쿠폰을 통해 저렴하게 구매할 수 있는 플랫폼 앱",
     "project_video": "dong.webm",
     "project_img": "",
-    "skill": ["Gnuboard", "HTML", "CSS", "Javascript", "GitHub", "AdobePhotoShop"],
+    "skill": [
+      "Gnuboard",
+      "HTML",
+      "CSS",
+      "Javascript",
+      "GitHub",
+      "AdobePhotoShop"
+    ],
     "date": "20.07 ~ 20.11"
   },
   {

@@ -21,7 +21,10 @@ const Menu = () => {
   return (
     <div className={styles.nav_wrap}>
       <nav>
-        <h1>MENU</h1>
+        <Link to="/">
+          <h1>HOME</h1>
+        </Link>
+
         <ul>
           <li>
             <Link to="./about">

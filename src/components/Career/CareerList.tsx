@@ -162,6 +162,7 @@ const CareerWrap = styled.ul`
 
   @media (min-width: 1024px) {
     & > li {
+      width: calc(100% - 40px);
       display: flex;
       justify-content: start;
       align-items: start;
@@ -177,6 +178,7 @@ const CareerWrap = styled.ul`
 
   @media (max-width: 1023px) and (min-width: 769px) {
     & > li {
+      width: calc(100% - 20px);
       display: flex;
       justify-content: start;
       align-items: start;
@@ -193,6 +195,7 @@ const CareerWrap = styled.ul`
 
   @media (max-width: 769px) {
     & > li {
+      width: calc(100% - 20px);
       display: flex;
       justify-content: start;
       align-items: start;
