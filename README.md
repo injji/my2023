@@ -9,7 +9,9 @@ Typescript\
 SCSS\
 styled-components\
 style module\
-styled-reset
+styled-reset\
+IntersectionObserver\
+swiper
 
 
 ## 반응형 
