@@ -10,7 +10,7 @@ SCSS\
 styled-components\
 style module\
 styled-reset\
-IntersectionObserver\
+IntersectionObserver API\
 swiper
 
 
