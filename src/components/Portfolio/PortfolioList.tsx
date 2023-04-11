@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useAtom } from "jotai";
 import { PortModalAtom, PortContentAtom } from "../../store/StorePage";
 import Image from "react-image-webp";
@@ -19,11 +19,45 @@ const PortfolioList = () => {
     setPortContent(targetId);
   };
 
+  const elementRefs = useRef<Array<HTMLLIElement | null>>([]);
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // 화면에 들어올 때 처리
+        entry.target.classList.add(styles.visible);
+      } else {
+        // 화면에서 나갈 때 처리
+        entry.target.classList.remove(styles.visible);
+      }
+    });
+  });
+
+  useEffect(() => {
+    elementRefs.current.forEach((ref) => {
+      if (ref) {
+        observer.observe(ref);
+      }
+    });
+
+    return () => {
+      elementRefs.current.forEach((ref) => {
+        if (ref) {
+          observer.unobserve(ref);
+        }
+      });
+    };
+  }, []);
+
   return (
     <PortfolioWrap className={styles.port_ul}>
-      {PortList.map((item) => {
+      {PortList.map((item, index) => {
         return (
-          <li key={item.id} onClick={() => handelPortModal(item.id)}>
+          <li
+            key={item.id}
+            onClick={() => handelPortModal(item.id)}
+            ref={(el) => (elementRefs.current[index] = el)}
+          >
             <div className="img">
               {item.project_img && (
                 <Image

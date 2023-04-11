@@ -1,3 +1,17 @@
+.visible {
+  opacity: 0;
+  animation: fadeIn 1s both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .about_wrap {
   height: 100%;
   background-color: #404893;
@@ -455,7 +469,7 @@
       line-height: 35px;
 
       padding-top: 50px;
-      margin-bottom: 50px;
+      margin-bottom: 30px;
     }
 
     h3 {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styles from "./styles.module.scss";
 import styled from "styled-components";
 
@@ -111,11 +111,41 @@ const CareerList = () => {
     },
   ];
 
+  const elementRefs = useRef<Array<HTMLLIElement | null>>([]);
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // 화면에 들어올 때 처리
+        entry.target.classList.add(styles.visible);
+      } else {
+        // 화면에서 나갈 때 처리
+        entry.target.classList.remove(styles.visible);
+      }
+    });
+  });
+
+  useEffect(() => {
+    elementRefs.current.forEach((ref) => {
+      if (ref) {
+        observer.observe(ref);
+      }
+    });
+
+    return () => {
+      elementRefs.current.forEach((ref) => {
+        if (ref) {
+          observer.unobserve(ref);
+        }
+      });
+    };
+  }, []);
+
   return (
     <CareerWrap className={styles.career_list}>
-      {Company.map((item) => {
+      {Company.map((item, index) => {
         return (
-          <li key={item.id}>
+          <li key={item.id} ref={(el) => (elementRefs.current[index] = el)}>
             <h3>{item.data}</h3>
             <div>
               <h5>{item.company}</h5>
