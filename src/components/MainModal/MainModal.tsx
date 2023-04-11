@@ -92,7 +92,7 @@ const MainModal = () => {
           나의 모든 이야기 <em></em>
         </p>
         <div className={styles.h3_wrap}>
-          <Link to="/portfolio"><h3>궁금한 이야기 K.</h3> </Link> 
+          <Link to="/about"><h3>궁금한 이야기 K.</h3> </Link> 
           {/* <span>GO</span> */}
         </div>
       </div>
