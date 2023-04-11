@@ -9,6 +9,10 @@ import Career from './components/Career/Career';
 import Portfolio from './components/Portfolio/Portfolio';
 
 const App = () => {
+  document.cookie = "safeCookie1=foo; SameSite=Lax"; 
+document.cookie = "safeCookie2=foo";  
+document.cookie = "crossCookie=bar; SameSite=None; Secure";
+
   return (
     <>
       <GlobalStyle />

@@ -48,33 +48,6 @@
     "date": "22.09 ~ 22.09"
   },
   {
-    "id": 4,
-    "project_name": "byapps 바이앱스 관리자",
-    "project_docs": "신사업인 맵스 트렌드 서비스 관련하여 제작된 관리용 웹페이지입니다. ",
-    "project_video": "",
-    "project_img": "byapp1.webp",
-    "skill": ["Laravel", "HTML", "CSS", "Javascript", "GitLab", "figma"],
-    "date": "22.05 ~ 22.06"
-  },
-  {
-    "id": 5,
-    "project_name": "MAPS TREND",
-    "project_docs": "신사업 홍보 마케팅용 웹페이지, 맵스 트렌드입니다. ",
-    "project_video": "",
-    "project_img": "maps.webp",
-    "skill": ["Laravel", "HTML", "CSS", "Javascript", "GitLab", "figma"],
-    "date": "21.11 ~ 22.02"
-  },
-  {
-    "id": 6,
-    "project_name": "Manimon",
-    "project_docs": "협력사의 홍보 마케팅용 웹페이지, manimon입니다. ",
-    "project_video": "",
-    "project_img": "manim2.webp",
-    "skill": ["Laravel", "HTML", "CSS", "Javascript", "GitLab"],
-    "date": "22.06 ~ 22.09"
-  },
-  {
     "id": 7,
     "project_name": "프렌즈 메타버스",
     "project_docs": "메타버스 홍보용 웹사이트와 B2B용 어플입니다.",
@@ -98,23 +71,24 @@
     "project_docs": "우리 동네의 음식점을 홍보하고 소비자는 쿠폰을 통해 저렴하게 구매할 수 있는 플랫폼 앱",
     "project_video": "dong.webm",
     "project_img": "",
-    "skill": [
-      "Gnuboard",
-      "HTML",
-      "CSS",
-      "Javascript",
-      "GitHub",
-      "AdobePhotoShop"
-    ],
+    "skill": ["Gnuboard", "HTML", "CSS", "Javascript", "AdobePhotoShop"],
     "date": "20.07 ~ 20.11"
   },
   {
-    "id": 10,
-    "project_name": "오가나 피부과 의원",
-    "project_docs": "오가나 피부과 의원의 홈페이지입니다.",
-    "project_video": "oh.webm",
-    "project_img": "",
-    "skill": ["Gnuboard", "HTML", "CSS", "Javascript", "AdobePhotoShop"],
-    "date": "20.10 ~ 21.01"
+    "id": 5,
+    "project_name": "MAPS TREND",
+    "project_docs": "신사업 홍보 마케팅용 웹페이지, 맵스 트렌드입니다. ",
+    "project_video": "",
+    "project_img": "maps.webp",
+    "skill": [
+      "Laravel",
+      "HTML",
+      "CSS",
+      "Javascript",
+      "Jquery",
+      "GitLab",
+      "figma"
+    ],
+    "date": "21.11 ~ 22.02"
   }
 ]

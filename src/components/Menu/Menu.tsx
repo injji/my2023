@@ -8,6 +8,7 @@ import menu1 from "../../assets/image/icon/nav1.svg";
 import menu2 from "../../assets/image/icon/nav2.svg";
 import menu3 from "../../assets/image/icon/nav3.svg";
 import menu4 from "../../assets/image/icon/nav4.svg";
+import menu5 from "../../assets/image/icon/nav5.svg";
 
 const Menu = () => {
   /** 현재 url 파악을 위함 */
@@ -21,11 +22,16 @@ const Menu = () => {
   return (
     <div className={styles.nav_wrap}>
       <nav>
-        <Link to="/">
-          <h1>HOME</h1>
-        </Link>
+          <h1>Menu</h1>
+        
 
         <ul>
+        <li>
+            <Link to="/">
+              <img src={menu5} alt="menu_icon" />
+              <p>메인 화면</p>
+            </Link>
+          </li>
           <li>
             <Link to="./about">
               <img src={menu1} alt="menu_icon" />
@@ -44,10 +50,10 @@ const Menu = () => {
               <p>포트폴리오</p>
             </Link>
           </li>
-          <li>
+          {/* <li>
             <img src={menu4} alt="menu_icon" />
             <p>문의해보기</p>
-          </li>
+          </li> */}
         </ul>
       </nav>
 
