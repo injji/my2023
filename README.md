@@ -11,7 +11,7 @@ styled-components\
 style module\
 styled-reset\
 IntersectionObserver API\
-swiper
+swiper slider
 
 
 ## 반응형 
