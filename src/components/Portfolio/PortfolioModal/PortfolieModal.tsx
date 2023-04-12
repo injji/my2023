@@ -1,43 +1,43 @@
-import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { useAtom } from 'jotai'
-import { PortModalAtom, PortContentAtom } from '../../../store/StorePage'
-import PortContentJson from '../portfolio_content.json'
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { useAtom } from "jotai";
+import { PortModalAtom, PortContentAtom } from "../../../store/StorePage";
+import PortContentJson from "../portfolio_content.json";
 
-import styled from 'styled-components'
+import styled from "styled-components";
 /** modal_content는 모듈로 뺌 */
-import styles from './styles.module.scss'
+import styles from "./styles.module.scss";
 
-import close from '../../../assets/image/icon/close.svg'
-import SwiperImg from './SwiperImg'
+import close from "../../../assets/image/icon/close.svg";
+import SwiperImg from "./SwiperImg";
 
 const PortfolieModal = () => {
   /** 모달 상태 */
-  const [portModal, setPortModal] = useAtom(PortModalAtom)
+  const [portModal, setPortModal] = useAtom(PortModalAtom);
 
   /** PortfoliioList 에서 클릭한 값 받아오기 */
-  const [portContent, setPortContent] = useAtom(PortContentAtom)
+  const [portContent, setPortContent] = useAtom(PortContentAtom);
 
   /** 데이터 기본 */
-  const [portJson, setPortJson] = useState(PortContentJson)
+  const [portJson, setPortJson] = useState(PortContentJson);
 
   /** 클릭 값의 데이터 저장 */
-  const [portShow, setPortShow] = useState(PortContentJson)
+  const [portShow, setPortShow] = useState(PortContentJson);
 
   /** 클릭 값 변경 될 때마다 데이터 변경하기 */
   useEffect(() => {
-    setPortShow(portJson.filter(item => item.id === portContent))
-  }, [portContent, portJson])
+    setPortShow(portJson.filter((item) => item.id === portContent));
+  }, [portContent, portJson]);
 
   /** 모달 닫기 */
   const handelPortModalClose = () => {
     setPortModal(false);
     document.body.style.overflow = "unset";
-  }
+  };
 
   return (
     <>
-      <ModalPort className={`${portModal ? 'open' : ''}`}>
+      <ModalPort className={`${portModal ? "open" : ""}`}>
         <div className="modal_wrap">
           <div className="modal_top">
             <button onClick={handelPortModalClose}>
@@ -47,7 +47,7 @@ const PortfolieModal = () => {
             <em></em>
           </div>
 
-          {portShow.map(item => {
+          {portShow.map((item) => {
             return (
               <div className={styles.modal_content} key={item.id}>
                 <h1>{item.project_name}</h1>
@@ -56,14 +56,14 @@ const PortfolieModal = () => {
                   <li>
                     <span>업무포지션</span>
                     {item.position.map((po, index) => {
-                      return <em key={index}>{po}</em>
+                      return <em key={index}>{po}</em>;
                     })}
                   </li>
 
                   <li>
                     <span>사용언어</span>
                     {item.skill.map((sk, index) => {
-                      return <em key={index}>{sk}</em>
+                      return <em key={index}>{sk}</em>;
                     })}
                   </li>
 
@@ -81,7 +81,7 @@ const PortfolieModal = () => {
                       </Link>
                     </li>
                   ) : (
-                    ''
+                    ""
                   )}
                 </ul>
 
@@ -116,21 +116,16 @@ const PortfolieModal = () => {
                             />
 
                             <img
-                              src={`${process.env.PUBLIC_URL}/image/${etc}.jpg`}
-                              alt={etc}
-                            />
-
-                            <img
                               src={`${process.env.PUBLIC_URL}/image/${etc}.png`}
                               alt={etc}
                             />
                           </picture>
                         </li>
-                      )
+                      );
                     })}
                 </ol>
               </div>
-            )
+            );
           })}
         </div>
       </ModalPort>
@@ -138,8 +133,8 @@ const PortfolieModal = () => {
       {/* 모달 검은 배경 */}
       {portModal && <ModalBg onClick={handelPortModalClose}></ModalBg>}
     </>
-  )
-}
+  );
+};
 
 const ModalPort = styled.div`
   overflow: hidden;
@@ -256,7 +251,7 @@ const ModalPort = styled.div`
       padding-right: 10px;
     }
   }
-`
+`;
 
 const ModalBg = styled.div`
   width: 100vw;
@@ -268,6 +263,6 @@ const ModalBg = styled.div`
   left: 0;
 
   z-index: 1;
-`
+`;
 
-export default PortfolieModal
+export default PortfolieModal;
