@@ -73,7 +73,7 @@ const PortfolioList = () => {
               )}
 
               {item.project_video && (
-                <video autoPlay muted loop height={210} playsInline>
+                <video autoPlay muted loop controls height={210} playsInline>
                   <source
                     src={`${process.env.PUBLIC_URL}/image/webp/${item.project_video}.webm`}
                     type="video/webm"
@@ -196,7 +196,11 @@ const PortfolioWrap = styled.ul`
 
     li {
       width: calc(50% - 10px);
-      height: 450px;
+      height: 550px;
+
+      .img {
+        height: 400px;
+      }
 
       .port_content {
         padding: 20px;

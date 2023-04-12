@@ -59,7 +59,7 @@
     {
         "id": 8,
         "project_name": "악기해바라상가",
-        "project_docs": "우리 주변의 악기를 알리고 판매하는 종합 악기 쇼핑몰입니다.",
+        "project_docs": "[프로젝트 팀장] 우리 주변의 악기를 알리고 판매하는 종합 악기 쇼핑몰입니다.",
         "project_video": "ak",
         "project_img": "",
         "skill": ["HTML", "CSS", "Javascript", "Godomall", "GitHub", "figma"],
