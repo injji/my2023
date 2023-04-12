@@ -7652,14 +7652,6 @@ react-hook-mighty-mouse@^1.4.31:
   resolved "https://registry.npmjs.org/react-hook-mighty-mouse/-/react-hook-mighty-mouse-1.4.31.tgz"
   integrity sha512-eLldpCv5nBH/j9KkXn/p+fG+p73D0q1mGSTEFF1V+SppgwcMyUeGnuB/I5TePAREeIQ+g0/USMV+2I2EMw8suw==
 
-react-image-webp@^0.8.0:
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/react-image-webp/-/react-image-webp-0.8.0.tgz#94481f2ff5f5d257a84a95a3febe3cf456a19b51"
-  integrity sha512-9CxV/wVFcHxIiyNPzN338WQ2xJIkMTR5mO4TYtNcHMURxuAb/Hp3HB3V3TEnbaKBlofF273ZLF8wbBu3bHI1aw==
-  dependencies:
-    react "^17.0.0"
-    react-dom "^17.0.0"
-
 react-is@^16.13.1, react-is@^16.7.0:
   version "16.13.1"
   resolved "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"

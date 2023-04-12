@@ -1,33 +1,36 @@
-@import "../../../common/getvw.scss";
+@import '../../../common/getvw.scss';
 
 .neck_img {
-  position: absolute;
-  z-index: 5;
+    position: absolute;
+    z-index: 5;
+
+    max-width: 81.08px;
+    max-height: 75.04px;
 }
 @media (min-width: 1024px) {
-  .neck_img {
-    width: pcvw(81.08px);
-    height: pcvw(75.04px);
-    left: pcvw(40px);
-    top: pcvw(120px);
-  }
+    .neck_img {
+        width: pcvw(81.08px);
+        height: pcvw(75.04px);
+        left: pcvw(40px);
+        top: pcvw(120px);
+    }
 }
 
 @media (max-width: 1023px) and (min-width: 769px) {
-  .neck_img {
-    width: tabvw(81.08px);
-    height: tabvw(75.04px);
-    left: tabvw(40px);
-    top: tabvw(120px);
-  }
+    .neck_img {
+        width: tabvw(81.08px);
+        height: tabvw(75.04px);
+        left: tabvw(40px);
+        top: tabvw(120px);
+    }
 }
 
 // 모바일버전
 @media (max-width: 768px) {
-  .neck_img {
-    width: movw(81.08px);
-    height: movw(75.04px);
-    left: movw(40px);
-    top: movw(120px);
-  }
+    .neck_img {
+        width: movw(81.08px);
+        height: movw(75.04px);
+        left: movw(40px);
+        top: movw(120px);
+    }
 }

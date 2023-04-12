@@ -1,78 +1,84 @@
-@import "../../common/getvw.scss";
+@import '../../common/getvw.scss';
 
 .main_page {
-  width: 100vw;
+    width: 100vw;
 
-  background-color: #f9f5ec;
+    background-color: #f9f5ec;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  overflow: hidden;
+    overflow: hidden;
 
-  .main_wrap {
-    position: relative;
-  }
+    .main_wrap {
+        position: relative;
+        max-width: 930px;
+        max-height: 730px;
+    }
 
-  .menu {
-    position: absolute;
-  }
+    .menu {
+        max-width: 80px;
+        max-height: 80px;
+        position: absolute;
+    }
 }
 
 @media (min-width: 1024px) {
-  .main_page {
-    height: 100vh;
-  }
+    .main_page {
+        height: 100vh;
+    }
 
-  .main_wrap {
-    width: pcvw(930px);
-    height: pcvw(730px);
-    top: pcvw(100px);
-  }
+    .main_wrap {
+        width: 930px;
+        height: 730px;
+        top: 100px;
+    }
 
-  .menu {
-    width: pcvw(80px);
-    height: pcvw(80px);
-    right: pcvw(80px);
-    top: pcvw(80px);
-  }
+    .menu {
+        width: pcvw(80px);
+        height: pcvw(80px);
+        right: pcvw(80px);
+        top: pcvw(80px);
+    }
 }
 
 @media (max-width: 1023px) and (min-width: 769px) {
-  .main_page {
-    height: calc(100vh - 80px);
-  }
+    .main_page {
+        height: calc(100vh - 80px);
+    }
 
-  .main_wrap {
-    width: tabvw(930px);
-    height: tabvw(730px);
-    top: tabvw(100px);
-  }
+    .main_wrap {
+        width: tabvw(930px);
+        height: tabvw(730px);
+        top: tabvw(100px);
+    }
 
-  .menu {
-    width: tabvw(80px);
-    height: tabvw(80px);
-    right: tabvw(50px);
-    top: tabvw(50px);
-  }
+    .menu {
+        width: tabvw(80px);
+        height: tabvw(80px);
+        right: tabvw(50px);
+        top: tabvw(50px);
+    }
 }
 
 @media (max-width: 768px) {
-  .main_page {
-    height: calc(100vh - 50px);
-  }
+    .main_page {
+        height: calc(100vh - 50px);
+    }
 
-  .main_wrap {
-    width: movw(930px);
-    height: movw(730px);
-    top: movw(100px);
-  }
+    .main_wrap {
+        width: movw(930px);
+        height: movw(730px);
+        top: 0;
+        // top: 50%;
+        // transform: translateY(-50%);
+    }
 
-  .menu {
-    width: movw(60px);
-    height: movw(60px);
-    right: movw(50px);
-    top: movw(50px);
-  }
+    .menu {
+        width: movw(60px);
+        height: movw(60px);
+        right: movw(50px);
+        top: movw(50px);
+    }
 }

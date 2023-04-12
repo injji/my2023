@@ -1,52 +1,53 @@
-@import "../../../common/getvw.scss";
+@import '../../../common/getvw.scss';
 
 .main_text {
-  position: absolute;
+    position: fixed;
 
-  left: 50%;
-  transform: translate(-50%, 0%);
+    left: 50%;
+    transform: translate(-50%, 0%);
 
-  p {
-      text-align: center;
-  }
-}
-
-
-@media (min-width: 1024px) {
-  .main_text {
-    width: pcvw(630px);
-    top: 50%;
-    margin-top: pcvw(-430px);
+    max-width: 630px;
 
     p {
-      font-size: pcvw(30px);
-      line-height: pcvw(45px);
+        text-align: center;
     }
-  }
+}
+
+@media (min-width: 1024px) {
+    .main_text {
+        width: 80%;
+        top: 10%;
+        // margin-top: pcvw(-430px);
+
+        p {
+            font-size: 25px;
+            line-height: 35px;
+        }
+    }
 }
 
 @media (max-width: 1023px) and (min-width: 769px) {
-  .main_text {
-    width: tabvw(630px);
-    top: 50%;
-    margin-top: tabvw(-450px);
+    .main_text {
+        width: 60%;
+        top: 20%;
+        // margin-top: tabvw(-450px);
 
-    p {
-      font-size: tabvw(30px);
-      line-height: tabvw(45px);
+        p {
+            font-size: 20px;
+            line-height: 30px;
+        }
     }
-  }
 }
 
 @media (max-width: 768px) {
-  .main_text {
-    width: movw(700px);
-    top: 50%;
-    margin-top: movw(-500px);
+    .main_text {
+        width: 80%;
+        top: 20%;
+        // margin-top: -300px;
 
-    p {
-      font-size: movw(30px);
-      line-height: movw(34px);
+        p {
+            font-size: 15px;
+            line-height: 25px;
+        }
     }
-  }
 }

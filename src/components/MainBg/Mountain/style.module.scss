@@ -1,71 +1,76 @@
-@import "../../../common/getvw.scss";
+@import '../../../common/getvw.scss';
 
 .mountain_wrap {
-  position: absolute;
-  z-index: 0;
+    position: absolute;
+    z-index: 0;
 
-  .san1 {
-    position: absolute;
-  }
-  .san2 {
-    position: absolute;
-    z-index: -1;
-  }
+    .san1 {
+        position: absolute;
+        max-width: 248.9px;
+        max-height: 291.76px;
+    }
+    .san2 {
+        position: absolute;
+        z-index: -1;
+
+        max-width: 248.9px;
+        max-height: 291.76px;
+    }
 }
 
 @media (min-width: 1024px) {
-  .mountain_wrap {
-    top: pcvw(25px);
-    left: pcvw(235px);
-  }
+    .mountain_wrap {
+        top: pcvw(25px);
+        left: pcvw(235px);
+    }
 
-  .san1 {
-    width: pcvw(376.8px);
-    height: pcvw(387.17px);
-  }
+    .san1 {
+        width: pcvw(376.8px);
+        height: pcvw(387.17px);
+    }
 
-  .san2 {
-    top: pcvw(98px);
-    left: pcvw(260px);
-    width: pcvw(248.9px);
-    height: pcvw(291.76px);
-  }
+    .san2 {
+        top: pcvw(98px);
+        left: pcvw(260px);
+        width: pcvw(248.9px);
+        height: pcvw(291.76px);
+    }
 }
 
 @media (max-width: 1023px) and (min-width: 769px) {
-  .mountain_wrap {
-    top: tabvw(25px);
-    left: tabvw(235px);
-  }
+    .mountain_wrap {
+        top: tabvw(25px);
+        left: tabvw(235px);
+    }
 
-  .san1 {
-    width: tabvw(376.8px);
-    height: tabvw(387.17px);
-  }
+    .san1 {
+        width: tabvw(376.8px);
+        height: tabvw(387.17px);
+    }
 
-  .san2 {
-    top: tabvw(98px);
-    left: tabvw(260px);
-    width: tabvw(248.9px);
-    height: tabvw(291.76px);
-  }
+    .san2 {
+        top: tabvw(98px);
+        left: tabvw(260px);
+        width: tabvw(248.9px);
+        height: tabvw(291.76px);
+    }
 }
 
 @media (max-width: 768px) {
-  .mountain_wrap {
-    top: movw(25px);
-    left: movw(235px);
-  }
+    .mountain_wrap {
+        top: movw(25px);
+        left: movw(235px);
+    }
 
-  .san1 {
-    width: movw(376.8px);
-    height: movw(387.17px);
-  }
+    .san1 {
+        width: movw(376.8px);
+        height: movw(387.17px);
+    }
 
-  .san2 {
-    top: movw(98px);
-    left: movw(260px);
-    width: movw(248.9px);
-    height: movw(291.76px);
-  }
+    .san2 {
+        top: movw(98px);
+        left: movw(260px);
+        width: movw(248.9px);
+        height: movw(291.76px);
+    }
 }

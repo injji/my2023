@@ -1,371 +1,395 @@
-@import "../../../common/getvw.scss";
+@import '../../../common/getvw.scss';
 
 .body_all {
-  position: absolute;
+    position: absolute;
 
-  left: 0;
-  top: 0;
+    left: 0;
+    top: 0;
 }
 
 .body_me {
-  position: absolute;
-  z-index: 4;
+    position: absolute;
+    z-index: 4;
+
+    max-width: 183.51px;
+    max-height: 211.56px;
 }
 
 .arm_l_up {
-  position: absolute;
-  transform: rotate(0deg);
-  z-index: 8;
+    position: absolute;
+    transform: rotate(0deg);
+    z-index: 8;
 
-  animation: arm_shout 5s linear infinite;
+    max-width: 203.4px;
+    max-height: 268.8px;
+
+    animation: arm_shout 5s linear infinite;
 }
 
 .arm_l_down {
-  position: absolute;
-  z-index: 9;
-
-  animation: arm_shout_carmera 5s linear infinite;
-
-  .camera {
     position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 15;
-    cursor: pointer;
-  }
+    z-index: 9;
+
+    max-width: 382.19px;
+    max-height: 307.11px;
+
+    animation: arm_shout_carmera 5s linear infinite;
+
+    .camera {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 15;
+        cursor: pointer;
+    }
 }
 
 .arm_r_up {
-  position: absolute;
-  z-index: 3;
+    position: absolute;
+    z-index: 3;
+
+    max-width: 116.59px;
+    max-height: 175.29px;
 }
 
 .arm_r_down {
-  position: absolute;
-  z-index: 3;
+    position: absolute;
+    z-index: 3;
+
+    max-width: 212.6px;
+    max-height: 116.31px;
 }
 
 .hand_r {
-  position: absolute;
-  z-index: 10;
+    position: absolute;
+    z-index: 10;
+
+    max-width: 103.71px;
+    max-height: 95.41px;
 }
 
 .bag {
-  position: relative;
+    position: relative;
 
-  .bagclick {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 15;
-    cursor: pointer;
+    max-width: 236.43px;
+    max-height: 267.91px;
 
-    width: 100%;
-    height: 100%;
-  }
+    .bagclick {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 15;
+        cursor: pointer;
 
-  .bag_body {
-    position: absolute;
-    z-index: 3;
-  }
-  .bag_top {
-    position: absolute;
-    z-index: 2;
+        width: 100%;
+        height: 100%;
+    }
 
-    animation: bag_move 1s linear infinite;
-  }
+    .bag_body {
+        position: absolute;
+        z-index: 3;
+    }
+    .bag_top {
+        position: absolute;
+        z-index: 2;
+
+        max-width: 133.65px;
+        max-height: 143.98px;
+
+        animation: bag_move 1s linear infinite;
+    }
 }
 
 @media (min-width: 1024px) {
-  .body_me {
-    top: pcvw(142px);
-    left: pcvw(-3px);
-    width: pcvw(183.51px);
-    height: pcvw(211.56px);
-  }
-
-  .arm_l_up {
-    width: pcvw(203.4px);
-    height: pcvw(268.8px);
-    left: pcvw(77px);
-    top: pcvw(145px);
-
-    @keyframes arm_shout {
-      0%,
-      100% {
-        transform: rotate(0deg) translate(pcvw(-36px), pcvw(0px));
-      }
-
-      50% {
-        transform: rotate(-15deg);
-      }
-    }
-  }
-
-  .arm_l_down {
-    width: pcvw(382.19px);
-    height: pcvw(307.11px);
-    left: pcvw(-151px);
-    top: pcvw(127px);
-    transform: translate(pcvw(-36px), 0px);
-    transform: rotate(15deg) translate(pcvw(-30px), pcvw(-45px));
-
-    @keyframes arm_shout_carmera {
-      0%,
-      100% {
-        transform: rotate(10deg) translate(pcvw(-40px), pcvw(-23px));
-      }
-
-      50% {
-        transform: translate(0, 0);
-      }
+    .body_me {
+        top: pcvw(142px);
+        left: pcvw(-3px);
+        width: pcvw(183.51px);
+        height: pcvw(211.56px);
     }
 
-    .camera {
-      width: pcvw(168px);
-      height: pcvw(154px);
+    .arm_l_up {
+        width: pcvw(203.4px);
+        height: pcvw(268.8px);
+        left: pcvw(77px);
+        top: pcvw(145px);
+
+        @keyframes arm_shout {
+            0%,
+            100% {
+                transform: rotate(0deg) translate(pcvw(-36px), pcvw(0px));
+            }
+
+            50% {
+                transform: rotate(-15deg);
+            }
+        }
     }
-  }
 
-  .arm_r_up {
-    width: pcvw(116.59px);
-    height: pcvw(175.29px);
+    .arm_l_down {
+        width: pcvw(382.19px);
+        height: pcvw(307.11px);
+        left: pcvw(-151px);
+        top: pcvw(127px);
+        transform: translate(pcvw(-36px), 0px);
+        transform: rotate(15deg) translate(pcvw(-30px), pcvw(-45px));
 
-    left: pcvw(-75px);
-    top: pcvw(140px);
-  }
+        @keyframes arm_shout_carmera {
+            0%,
+            100% {
+                transform: rotate(10deg) translate(pcvw(-40px), pcvw(-23px));
+            }
 
-  .arm_r_down {
-    width: pcvw(212.6px);
-    height: pcvw(116.31px);
-    left: pcvw(-170px);
-    top: pcvw(238px);
-  }
+            50% {
+                transform: translate(0, 0);
+            }
+        }
 
-  .hand_r {
-    width: pcvw(103.71px);
-    height: pcvw(95.41px);
-    left: pcvw(-200px);
-    top: pcvw(205px);
-  }
-
-  .bag {
-    width: pcvw(236.43px);
-    height: pcvw(267.91px);
-    left: pcvw(30px);
-    top: pcvw(120px);
-  }
-
-  .bag_top {
-    width: pcvw(133.65px);
-    height: pcvw(143.98px);
-    left: pcvw(100px);
-    top: pcvw(40px);
-  }
-
-  @keyframes bag_move {
-    0%,
-    100% {
-      transform: translate(0, 0) rotate(0);
+        .camera {
+            width: pcvw(168px);
+            height: pcvw(154px);
+        }
     }
-    50% {
-      transform: translate(pcvw(18px), 0) rotate(-23deg);
+
+    .arm_r_up {
+        width: pcvw(116.59px);
+        height: pcvw(175.29px);
+
+        left: pcvw(-75px);
+        top: pcvw(140px);
     }
-  }
+
+    .arm_r_down {
+        width: pcvw(212.6px);
+        height: pcvw(116.31px);
+        left: pcvw(-170px);
+        top: pcvw(238px);
+    }
+
+    .hand_r {
+        width: pcvw(103.71px);
+        height: pcvw(95.41px);
+        left: pcvw(-200px);
+        top: pcvw(205px);
+    }
+
+    .bag {
+        width: pcvw(236.43px);
+        height: pcvw(267.91px);
+        left: pcvw(30px);
+        top: pcvw(120px);
+    }
+
+    .bag_top {
+        width: pcvw(133.65px);
+        height: pcvw(143.98px);
+        left: pcvw(100px);
+        top: pcvw(40px);
+    }
+
+    @keyframes bag_move {
+        0%,
+        100% {
+            transform: translate(0, 0) rotate(0);
+        }
+        50% {
+            transform: translate(pcvw(18px), 0) rotate(-23deg);
+        }
+    }
 }
 
 @media (max-width: 1023px) and (min-width: 769px) {
-  .body_me {
-    top: tabvw(142px);
-    left: tabvw(-3px);
-    width: tabvw(183.51px);
-    height: tabvw(211.56px);
-  }
-
-  .arm_l_up {
-    width: tabvw(203.4px);
-    height: tabvw(268.8px);
-    left: tabvw(77px);
-    top: tabvw(145px);
-
-    @keyframes arm_shout {
-      0%,
-      100% {
-        transform: rotate(0deg) translate(tabvw(-36px), tabvw(0px));
-      }
-
-      50% {
-        transform: rotate(-15deg);
-      }
-    }
-  }
-
-  .arm_l_down {
-    width: tabvw(382.19px);
-    height: tabvw(307.11px);
-    left: tabvw(-151px);
-    top: tabvw(127px);
-    transform: translate(tabvw(-36px), 0px);
-    transform: rotate(15deg) translate(tabvw(-30px), tabvw(-45px));
-
-    @keyframes arm_shout_carmera {
-      0%,
-      100% {
-        transform: rotate(10deg) translate(tabvw(-40px), tabvw(-23px));
-      }
-
-      50% {
-        transform: translate(0, 0);
-      }
+    .body_me {
+        top: tabvw(142px);
+        left: tabvw(-3px);
+        width: tabvw(183.51px);
+        height: tabvw(211.56px);
     }
 
-    .camera {
-      width: tabvw(168px);
-      height: tabvw(154px);
+    .arm_l_up {
+        width: tabvw(203.4px);
+        height: tabvw(268.8px);
+        left: tabvw(77px);
+        top: tabvw(145px);
+
+        @keyframes arm_shout {
+            0%,
+            100% {
+                transform: rotate(0deg) translate(tabvw(-36px), tabvw(0px));
+            }
+
+            50% {
+                transform: rotate(-15deg);
+            }
+        }
     }
-  }
 
-  .arm_r_up {
-    width: tabvw(116.59px);
-    height: tabvw(175.29px);
+    .arm_l_down {
+        width: tabvw(382.19px);
+        height: tabvw(307.11px);
+        left: tabvw(-151px);
+        top: tabvw(127px);
+        transform: translate(tabvw(-36px), 0px);
+        transform: rotate(15deg) translate(tabvw(-30px), tabvw(-45px));
 
-    left: tabvw(-75px);
-    top: tabvw(140px);
-  }
+        @keyframes arm_shout_carmera {
+            0%,
+            100% {
+                transform: rotate(10deg) translate(tabvw(-40px), tabvw(-23px));
+            }
 
-  .arm_r_down {
-    width: tabvw(212.6px);
-    height: tabvw(116.31px);
-    left: tabvw(-170px);
-    top: tabvw(238px);
-  }
+            50% {
+                transform: translate(0, 0);
+            }
+        }
 
-  .hand_r {
-    width: tabvw(103.71px);
-    height: tabvw(95.41px);
-    left: tabvw(-200px);
-    top: tabvw(205px);
-  }
-
-  .bag {
-    width: tabvw(236.43px);
-    height: tabvw(267.91px);
-    left: tabvw(30px);
-    top: tabvw(120px);
-  }
-
-  .bag_top {
-    width: tabvw(133.65px);
-    height: tabvw(143.98px);
-    left: tabvw(100px);
-    top: tabvw(40px);
-  }
-
-  @keyframes bag_move {
-    0%,
-    100% {
-      transform: translate(0, 0) rotate(0);
+        .camera {
+            width: tabvw(168px);
+            height: tabvw(154px);
+        }
     }
-    50% {
-      transform: translate(tabvw(18px), 0) rotate(-23deg);
+
+    .arm_r_up {
+        width: tabvw(116.59px);
+        height: tabvw(175.29px);
+
+        left: tabvw(-75px);
+        top: tabvw(140px);
     }
-  }
+
+    .arm_r_down {
+        width: tabvw(212.6px);
+        height: tabvw(116.31px);
+        left: tabvw(-170px);
+        top: tabvw(238px);
+    }
+
+    .hand_r {
+        width: tabvw(103.71px);
+        height: tabvw(95.41px);
+        left: tabvw(-200px);
+        top: tabvw(205px);
+    }
+
+    .bag {
+        width: tabvw(236.43px);
+        height: tabvw(267.91px);
+        left: tabvw(30px);
+        top: tabvw(120px);
+    }
+
+    .bag_top {
+        width: tabvw(133.65px);
+        height: tabvw(143.98px);
+        left: tabvw(100px);
+        top: tabvw(40px);
+    }
+
+    @keyframes bag_move {
+        0%,
+        100% {
+            transform: translate(0, 0) rotate(0);
+        }
+        50% {
+            transform: translate(tabvw(18px), 0) rotate(-23deg);
+        }
+    }
 }
 
 @media (max-width: 768px) {
-  .body_me {
-    width: movw(183.51px);
-    height: movw(211.56px);
-    top: movw(142px);
-    left: movw(-3px);
-  }
-
-  .arm_l_up {
-    width: movw(203.4px);
-    height: movw(268.8px);
-    left: movw(77px);
-    top: movw(145px);
-
-    @keyframes arm_shout {
-      0%,
-      100% {
-        transform: rotate(0deg) translate(movw(-36px), movw(0px));
-      }
-
-      50% {
-        transform: rotate(-15deg);
-      }
-    }
-  }
-
-  .arm_l_down {
-    width: movw(382.19px);
-    height: movw(307.11px);
-    left: movw(-151px);
-    top: movw(127px);
-    transform: translate(movw(-36px), 0px);
-    transform: rotate(15deg) translate(movw(-30px), movw(-45px));
-
-    @keyframes arm_shout_carmera {
-      0%,
-      100% {
-        transform: rotate(10deg) translate(movw(-40px), movw(-23px));
-      }
-
-      50% {
-        transform: translate(0, 0);
-      }
+    .body_me {
+        width: movw(183.51px);
+        height: movw(211.56px);
+        top: movw(142px);
+        left: movw(-3px);
     }
 
-    .camera {
-      width: movw(168px);
-      height: movw(154px);
+    .arm_l_up {
+        width: movw(203.4px);
+        height: movw(268.8px);
+        left: movw(77px);
+        top: movw(145px);
+
+        @keyframes arm_shout {
+            0%,
+            100% {
+                transform: rotate(0deg) translate(movw(-36px), movw(0px));
+            }
+
+            50% {
+                transform: rotate(-15deg);
+            }
+        }
     }
-  }
 
-  .arm_r_up {
-    width: movw(116.59px);
-    height: movw(175.29px);
+    .arm_l_down {
+        width: movw(382.19px);
+        height: movw(307.11px);
+        left: movw(-151px);
+        top: movw(127px);
+        transform: translate(movw(-36px), 0px);
+        transform: rotate(15deg) translate(movw(-30px), movw(-45px));
 
-    left: movw(-75px);
-    top: movw(140px);
-  }
+        @keyframes arm_shout_carmera {
+            0%,
+            100% {
+                transform: rotate(10deg) translate(movw(-40px), movw(-23px));
+            }
 
-  .arm_r_down {
-    width: movw(212.6px);
-    height: movw(116.31px);
-    left: movw(-170px);
-    top: movw(238px);
-  }
+            50% {
+                transform: translate(0, 0);
+            }
+        }
 
-  .hand_r {
-    width: movw(103.71px);
-    height: movw(95.41px);
-    left: movw(-200px);
-    top: movw(205px);
-  }
-
-  .bag {
-    width: movw(236.43px);
-    height: movw(267.91px);
-    left: movw(20px);
-    top: movw(120px);
-
-    .bag_top {
-      width: movw(138px);
-      height: movw(143px);
-      left: movw(98px);
-      top: movw(38px);
+        .camera {
+            width: movw(168px);
+            height: movw(154px);
+        }
     }
-  }
 
-  @keyframes bag_move {
-    0%,
-    100% {
-      transform: translate(0, 0) rotate(0);
+    .arm_r_up {
+        width: movw(116.59px);
+        height: movw(175.29px);
+
+        left: movw(-75px);
+        top: movw(140px);
     }
-    50% {
-      transform: translate(movw(18px), 0) rotate(-23deg);
+
+    .arm_r_down {
+        width: movw(212.6px);
+        height: movw(116.31px);
+        left: movw(-170px);
+        top: movw(238px);
     }
-  }
+
+    .hand_r {
+        width: movw(103.71px);
+        height: movw(95.41px);
+        left: movw(-200px);
+        top: movw(205px);
+    }
+
+    .bag {
+        width: movw(236.43px);
+        height: movw(267.91px);
+        left: movw(20px);
+        top: movw(120px);
+
+        .bag_top {
+            width: movw(138px);
+            height: movw(143px);
+            left: movw(98px);
+            top: movw(38px);
+        }
+    }
+
+    @keyframes bag_move {
+        0%,
+        100% {
+            transform: translate(0, 0) rotate(0);
+        }
+        50% {
+            transform: translate(movw(18px), 0) rotate(-23deg);
+        }
+    }
 }

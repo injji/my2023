@@ -1,232 +1,240 @@
-@import "../../../common/getvw.scss";
+@import '../../../common/getvw.scss';
 
 .zzam_wrap {
-  position: absolute;
-  z-index: 1;
-  cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
 }
 
 .zzambbong {
-  position: absolute;
+    position: absolute;
+
+    max-width: 222px;
+    max-height: 173px;
 }
 
 .stick_wrap {
-  position: absolute;
-  animation: ramem_up 3s linear infinite;
+    position: absolute;
+    animation: ramem_up 3s linear infinite;
 }
 
 .stick {
-  position: absolute;
-
-  em {
     position: absolute;
-    top: 0;
-    z-index: 0;
-  }
 
-  .stick2 {
-    z-index: 2;
-  }
+    em {
+        position: absolute;
+        top: 0;
+        z-index: 0;
+
+        max-width: 118.86px;
+        max-height: 70.65px;
+    }
+
+    .stick2 {
+        z-index: 2;
+    }
 }
 
 .men {
-  z-index: 1;
-  position: absolute;
+    z-index: 1;
+    position: absolute;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  transform: rotate(-25deg);
+    transform: rotate(-25deg);
 
-  span {
-    animation: ramem_leng 3s linear infinite;
-    background: #f0e0b8;
-  }
+    span {
+        max-width: 5px;
+        max-height: 100px;
+        animation: ramem_leng 3s linear infinite;
+        background: #f0e0b8;
+    }
 }
 
 @media (min-width: 1024px) {
-  .zzam_wrap {
-    top: pcvw(400px);
-    left: pcvw(50px);
-  }
-
-  .zzambbong {
-    width: pcvw(222px);
-    height: pcvw(173px);
-    top: pcvw(50px);
-  }
-
-  .stick_wrap {
-    top: pcvw(8px);
-    left: pcvw(-8px);
-  }
-
-  .stick {
-    top: pcvw(5px);
-    left: pcvw(-5px);
-
-    em {
-      width: pcvw(118.86px);
-      height: pcvw(70.65px);
-      left: pcvw(10px);
+    .zzam_wrap {
+        top: pcvw(400px);
+        left: pcvw(50px);
     }
-  }
 
-  .men {
-    border-left: pcvw(3px) solid #000;
-    border-top: pcvw(3px) solid #000;
-    top: pcvw(8px);
-    left: pcvw(90px);
+    .zzambbong {
+        width: pcvw(222px);
+        height: pcvw(173px);
+        top: pcvw(50px);
+    }
 
-    span {
-      width: pcvw(5px);
-      height: pcvw(100px);
-      border-right: pcvw(3px) solid #000;
+    .stick_wrap {
+        top: pcvw(8px);
+        left: pcvw(-8px);
     }
-  }
 
-  @keyframes ramem_up {
-    0%,
-    100% {
-      transform: translate(pcvw(10px), pcvw(25px));
-    }
-    50% {
-      transform: translate(0, 0);
-    }
-  }
+    .stick {
+        top: pcvw(5px);
+        left: pcvw(-5px);
 
-  @keyframes ramem_leng {
-    0%,
-    100% {
-      height: pcvw(70px);
+        em {
+            width: pcvw(118.86px);
+            height: pcvw(70.65px);
+            left: pcvw(10px);
+        }
     }
-    50% {
-      height: pcvw(100px);
+
+    .men {
+        border-left: pcvw(3px) solid #000;
+        border-top: pcvw(3px) solid #000;
+        top: pcvw(8px);
+        left: pcvw(90px);
+
+        span {
+            width: pcvw(5px);
+            height: pcvw(100px);
+            border-right: pcvw(3px) solid #000;
+        }
     }
-  }
+
+    @keyframes ramem_up {
+        0%,
+        100% {
+            transform: translate(pcvw(10px), pcvw(25px));
+        }
+        50% {
+            transform: translate(0, 0);
+        }
+    }
+
+    @keyframes ramem_leng {
+        0%,
+        100% {
+            height: pcvw(70px);
+        }
+        50% {
+            height: pcvw(100px);
+        }
+    }
 }
 
 @media (max-width: 1023px) and (min-width: 769px) {
-  .zzam_wrap {
-    top: tabvw(400px);
-    left: tabvw(50px);
-  }
-
-  .zzambbong {
-    width: tabvw(222px);
-    height: tabvw(173px);
-    top: tabvw(50px);
-  }
-
-  .stick_wrap {
-    top: tabvw(8px);
-    left: tabvw(-8px);
-  }
-
-  .stick {
-    top: tabvw(5px);
-    left: tabvw(-5px);
-
-    em {
-      width: tabvw(118.86px);
-      height: tabvw(70.65px);
-      left: tabvw(10px);
+    .zzam_wrap {
+        top: tabvw(400px);
+        left: tabvw(50px);
     }
-  }
 
-  .men {
-    border-left: tabvw(3px) solid #000;
-    border-top: tabvw(3px) solid #000;
-    top: tabvw(8px);
-    left: tabvw(90px);
+    .zzambbong {
+        width: tabvw(222px);
+        height: tabvw(173px);
+        top: tabvw(50px);
+    }
 
-    span {
-      width: tabvw(5px);
-      height: tabvw(100px);
-      border-right: tabvw(3px) solid #000;
+    .stick_wrap {
+        top: tabvw(8px);
+        left: tabvw(-8px);
     }
-  }
 
-  @keyframes ramem_up {
-    0%,
-    100% {
-      transform: translate(tabvw(10px), tabvw(25px));
-    }
-    50% {
-      transform: translate(0, 0);
-    }
-  }
+    .stick {
+        top: tabvw(5px);
+        left: tabvw(-5px);
 
-  @keyframes ramem_leng {
-    0%,
-    100% {
-      height: tabvw(70px);
+        em {
+            width: tabvw(118.86px);
+            height: tabvw(70.65px);
+            left: tabvw(10px);
+        }
     }
-    50% {
-      height: tabvw(100px);
+
+    .men {
+        border-left: tabvw(3px) solid #000;
+        border-top: tabvw(3px) solid #000;
+        top: tabvw(8px);
+        left: tabvw(90px);
+
+        span {
+            width: tabvw(5px);
+            height: tabvw(100px);
+            border-right: tabvw(3px) solid #000;
+        }
     }
-  }
+
+    @keyframes ramem_up {
+        0%,
+        100% {
+            transform: translate(tabvw(10px), tabvw(25px));
+        }
+        50% {
+            transform: translate(0, 0);
+        }
+    }
+
+    @keyframes ramem_leng {
+        0%,
+        100% {
+            height: tabvw(70px);
+        }
+        50% {
+            height: tabvw(100px);
+        }
+    }
 }
 
 @media (max-width: 768px) {
-  .zzam_wrap {
-    top: movw(400px);
-    left: movw(50px);
-  }
-
-  .zzambbong {
-    width: movw(222px);
-    height: movw(173px);
-    top: movw(50px);
-  }
-
-  .stick_wrap {
-    top: movw(8px);
-    left: movw(-8px);
-  }
-
-  .stick {
-    top: movw(5px);
-    left: movw(-5px);
-
-    em {
-      width: movw(118.86px);
-      height: movw(70.65px);
-      left: movw(10px);
+    .zzam_wrap {
+        top: movw(400px);
+        left: movw(50px);
     }
-  }
 
-  .men {
-    border-left: movw(3px) solid #000;
-    border-top: movw(3px) solid #000;
-    top: movw(8px);
-    left: movw(90px);
+    .zzambbong {
+        width: movw(222px);
+        height: movw(173px);
+        top: movw(50px);
+    }
 
-    span {
-      width: movw(5px);
-      height: movw(100px);
-      border-right: movw(3px) solid #000;
+    .stick_wrap {
+        top: movw(8px);
+        left: movw(-8px);
     }
-  }
 
-  @keyframes ramem_up {
-    0%,
-    100% {
-      transform: translate(movw(10px), movw(25px));
-    }
-    50% {
-      transform: translate(0, 0);
-    }
-  }
+    .stick {
+        top: movw(5px);
+        left: movw(-5px);
 
-  @keyframes ramem_leng {
-    0%,
-    100% {
-      height: movw(70px);
+        em {
+            width: movw(118.86px);
+            height: movw(70.65px);
+            left: movw(10px);
+        }
     }
-    50% {
-      height: movw(100px);
+
+    .men {
+        border-left: movw(3px) solid #000;
+        border-top: movw(3px) solid #000;
+        top: movw(8px);
+        left: movw(90px);
+
+        span {
+            width: movw(5px);
+            height: movw(100px);
+            border-right: movw(3px) solid #000;
+        }
     }
-  }
+
+    @keyframes ramem_up {
+        0%,
+        100% {
+            transform: translate(movw(10px), movw(25px));
+        }
+        50% {
+            transform: translate(0, 0);
+        }
+    }
+
+    @keyframes ramem_leng {
+        0%,
+        100% {
+            height: movw(70px);
+        }
+        50% {
+            height: movw(100px);
+        }
+    }
 }
