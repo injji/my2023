@@ -73,7 +73,7 @@ const PortfolioList = () => {
               )}
 
               {item.project_video && (
-                <video autoPlay muted loop height={210}>
+                <video autoPlay muted loop height={210} playsInline>
                   <source
                     src={`${process.env.PUBLIC_URL}/image/webp/${item.project_video}.webm`}
                     type="video/webm"

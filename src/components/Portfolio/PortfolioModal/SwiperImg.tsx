@@ -27,7 +27,7 @@ const SwiperImg = ({ ProjectImg, ProjectVideo }: PortShowProps) => {
         return (
           videoImg && (
             <SliderDiv key={index}>
-              <video autoPlay muted loop height={500}>
+              <video autoPlay muted loop height={500} playsInline>
                 <source
                   src={`${process.env.PUBLIC_URL}/image/webp/${videoImg}.webm`}
                   type="video/webm"
