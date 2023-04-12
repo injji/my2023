@@ -180,27 +180,27 @@
 @media (max-width: 768px) {
     .modal_wrap {
         &.flower {
-            transform: translate(movw(-400px), movw(-200px));
+            transform: translate(movw(-400px), movw(-150px));
         }
 
         &.zzambbong {
-            transform: translate(movw(-450px), movw(100px));
+            transform: translate(movw(-450px), movw(150px));
         }
 
         &.shout {
-            transform: translate(movw(-50px), movw(-150px));
+            transform: translate(movw(-50px), movw(-100px));
         }
 
         &.nabong {
-            transform: translate(movw(-250px), 0);
+            transform: translate(movw(-250px), movw(50px));
         }
 
         &.holiday {
-            transform: translate(movw(100px), movw(20px));
+            transform: translate(movw(100px), movw(70px));
         }
 
         &.portfolio {
-            transform: translate(movw(150px), movw(-250px));
+            transform: translate(movw(150px), movw(-200px));
         }
 
         p {

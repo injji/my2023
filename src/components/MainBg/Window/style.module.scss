@@ -1,117 +1,143 @@
-@import '../../../common/getvw.scss';
+@import "../../../common/getvw.scss";
 
 .window {
+  position: absolute;
+  z-index: 3;
+  cursor: pointer;
+
+  span {
     position: absolute;
-    z-index: 3;
-    cursor: pointer;
 
-    span {
-        position: absolute;
+    max-width: 311.23px;
+    max-height: 179.76px;
 
-        max-width: 311.23px;
-        max-height: 179.76px;
+    background: url(../../../../public/image/window.svg) no-repeat center;
+    background-size: contain;
+
+    picture {
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
+  }
 
-    .windowclick {
-        max-width: 388px;
-        max-height: 240px;
-    }
+  .windowclick {
+    max-width: 388px;
+    max-height: 240px;
+  }
 
-    .figma_window {
-        animation: window_opacity 5s step-end infinite;
-        // animation-delay: 5s;
-    }
+  .figma_window {
+    animation: window_opacity 5s step-end infinite;
 
-    .react_window {
-        animation: window_opacity2 5s step-end infinite;
-        // animation: window_opacity 1s linear infinite;
+    source,
+    img {
+        margin-top: 10px;
+      width: auto;
+      height: 60%;
     }
+    // animation-delay: 5s;
+  }
+
+  .react_window {
+    animation: window_opacity2 5s step-end infinite;
+    // animation: window_opacity 1s linear infinite;
+
+    source,
+    img {
+        margin-top: 10px;
+      width: auto;
+      height: 60%;
+    }
+  }
 }
 
 @media (min-width: 1024px) {
-    .window {
-        top: pcvw(0px);
-        left: pcvw(450px);
+  .window {
+    top: pcvw(0px);
+    left: pcvw(450px);
 
-        .windowclick {
-            width: pcvw(388px);
-            height: pcvw(240px);
-        }
-
-        span {
-            width: pcvw(311.23px);
-            height: pcvw(179.76px);
-        }
-
-        .react_window {
-            top: pcvw(60px);
-            left: pcvw(75px);
-        }
+    .windowclick {
+      width: pcvw(388px);
+      height: pcvw(240px);
     }
+
+    span {
+      width: pcvw(311.23px);
+      height: pcvw(179.76px);
+    }
+
+    .react_window {
+      top: pcvw(60px);
+      left: pcvw(75px);
+    }
+  }
 }
 
 @media (max-width: 1023px) and (min-width: 769px) {
-    .window {
-        top: tabvw(0px);
-        left: tabvw(450px);
+  .window {
+    top: tabvw(0px);
+    left: tabvw(450px);
 
-        .windowclick {
-            width: tabvw(388px);
-            height: tabvw(240px);
-        }
-
-        span {
-            width: tabvw(311.23px);
-            height: tabvw(179.76px);
-        }
-
-        .react_window {
-            top: tabvw(60px);
-            left: tabvw(75px);
-        }
+    .windowclick {
+      width: tabvw(388px);
+      height: tabvw(240px);
     }
+
+    span {
+      width: tabvw(311.23px);
+      height: tabvw(179.76px);
+    }
+
+    .react_window {
+      top: tabvw(60px);
+      left: tabvw(75px);
+    }
+  }
 }
 
 @media (max-width: 768px) {
-    .window {
-        top: movw(0px);
-        left: movw(450px);
+  .window {
+    top: movw(0px);
+    left: movw(450px);
 
-        .windowclick {
-            width: movw(388px);
-            height: movw(240px);
-        }
-
-        span {
-            width: movw(311.23px);
-            height: movw(179.76px);
-        }
-
-        .react_window {
-            top: movw(60px);
-            left: movw(75px);
-        }
+    .windowclick {
+      width: movw(388px);
+      height: movw(240px);
     }
+
+    span {
+      width: movw(311.23px);
+      height: movw(179.76px);
+    }
+
+    .react_window {
+      top: movw(60px);
+      left: movw(75px);
+    }
+  }
 }
 
 @keyframes window_opacity {
-    0%,
-    10%,
-    90% {
-        opacity: 0;
-    }
-    15% {
-        opacity: 1;
-    }
+  0%,
+  10%,
+  90% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
 }
 
 @keyframes window_opacity2 {
-    0%,
-    20%,
-    80% {
-        opacity: 0;
-    }
-    25% {
-        opacity: 1;
-    }
+  0%,
+  20%,
+  80% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
 }

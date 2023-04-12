@@ -1,23 +1,23 @@
-import React from 'react'
+import React from "react";
 
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Autoplay, Pagination } from 'swiper'
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper";
 
-import 'swiper/css'
-import 'swiper/css/pagination'
+import "swiper/css";
+import "swiper/css/pagination";
 
-import styled from 'styled-components'
+import styled from "styled-components";
 
 interface PortShowProps {
-  ProjectImg: string[]
-  ProjectVideo: string[]
+  ProjectImg: string[];
+  ProjectVideo: string[];
 }
 
 const SwiperImg = ({ ProjectImg, ProjectVideo }: PortShowProps) => {
   return (
     <SwiperWrap
       autoplay={{
-        delay: 4000,
+        delay: 6500,
         disableOnInteraction: false,
       }}
       modules={[Pagination, Autoplay]}
@@ -27,7 +27,7 @@ const SwiperImg = ({ ProjectImg, ProjectVideo }: PortShowProps) => {
         return (
           videoImg && (
             <SliderDiv key={index}>
-              <video autoPlay muted loop height={500} controls playsInline>
+              <video autoPlay muted loop controls playsInline>
                 <source
                   src={`${process.env.PUBLIC_URL}/image/webp/${videoImg}.webm`}
                   type="video/webm"
@@ -40,7 +40,7 @@ const SwiperImg = ({ ProjectImg, ProjectVideo }: PortShowProps) => {
               </video>
             </SliderDiv>
           )
-        )
+        );
       })}
 
       {ProjectImg.map((item, index) => {
@@ -60,11 +60,11 @@ const SwiperImg = ({ ProjectImg, ProjectVideo }: PortShowProps) => {
               </picture>
             </SliderDiv>
           )
-        )
+        );
       })}
     </SwiperWrap>
-  )
-}
+  );
+};
 
 const SwiperWrap = styled(Swiper)`
   width: 100%;
@@ -78,7 +78,7 @@ const SwiperWrap = styled(Swiper)`
   @media (max-width: 769px) {
     height: 250px;
   }
-`
+`;
 const SliderDiv = styled(SwiperSlide)`
   background-color: #f9f9f9;
 
@@ -90,7 +90,8 @@ const SliderDiv = styled(SwiperSlide)`
     width: auto;
     height: 100%;
   }
-
+  
+  video,
   picture {
     width: 100%;
     height: 100%;
@@ -99,6 +100,6 @@ const SliderDiv = styled(SwiperSlide)`
     justify-content: center;
     align-items: center;
   }
-`
+`;
 
-export default SwiperImg
+export default SwiperImg;

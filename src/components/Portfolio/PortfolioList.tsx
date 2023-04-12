@@ -14,8 +14,9 @@ const PortfolioList = () => {
   const [portContent, setPortContent] = useAtom(PortContentAtom)
 
   const handelPortModal = (targetId: number) => {
-    setPortModal(!portModal)
+    setPortModal(true)
     setPortContent(targetId)
+    document.body.style.overflow = "hidden";
   }
 
   const elementRefs = useRef<Array<HTMLLIElement | null>>([])

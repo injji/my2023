@@ -31,7 +31,8 @@ const PortfolieModal = () => {
 
   /** 모달 닫기 */
   const handelPortModalClose = () => {
-    setPortModal(false)
+    setPortModal(false);
+    document.body.style.overflow = "unset";
   }
 
   return (

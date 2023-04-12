@@ -14,14 +14,14 @@
 
 @media (min-width: 1024px) {
   .main_text {
-    width: 80%;
+    width: 50%;
     top: 10%;
     left: calc(50% - 50px);
     // margin-top: pcvw(-430px);
 
     p {
-      font-size: 25px;
-      line-height: 35px;
+      font-size: 23px;
+      line-height: 33px;
     }
   }
 }
@@ -43,7 +43,7 @@
 @media (max-width: 768px) {
   .main_text {
     width: 80%;
-    top: 20%;
+    top: 16%;
     left: 50%;
     // margin-top: -300px;
 
