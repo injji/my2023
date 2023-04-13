@@ -1,22 +1,24 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import GlobalStyle from "./common/GlobalStyle";
-import Main from "./pages/Main/Main";
-import Layout from "./components/Layout/Layout";
-import About from "./components/About/About";
-import NotFound from "./components/NotFound/NotFound";
-import Career from './components/Career/Career';
-import Portfolio from './components/Portfolio/Portfolio';
+import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import GlobalStyle from './common/GlobalStyle'
+import Main from './pages/Main/Main'
+import Layout from './components/Layout/Layout'
+import About from './components/About/About'
+import NotFound from './components/NotFound/NotFound'
+import Career from './components/Career/Career'
+import Portfolio from './components/Portfolio/Portfolio'
+import { ScrollToTop } from './components/ScrollToTop/ScrollToTop'
 
 const App = () => {
-  document.cookie = "safeCookie1=foo; SameSite=Lax"; 
-document.cookie = "safeCookie2=foo";  
-document.cookie = "crossCookie=bar; SameSite=None; Secure";
+  document.cookie = 'safeCookie1=foo; SameSite=Lax'
+  document.cookie = 'safeCookie2=foo'
+  document.cookie = 'crossCookie=bar; SameSite=None; Secure'
 
   return (
     <>
       <GlobalStyle />
       <BrowserRouter>
+        <ScrollToTop />
         <Layout>
           <Routes>
             <Route path="/" element={<Main />}></Route>
@@ -32,7 +34,7 @@ document.cookie = "crossCookie=bar; SameSite=None; Secure";
         </Layout>
       </BrowserRouter>
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App
