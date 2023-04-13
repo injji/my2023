@@ -1,4 +1,4 @@
-@import "../../common/getvw.scss";
+@import '../../common/getvw.scss';
 
 .my_me {
   position: relative;
@@ -8,8 +8,14 @@ img {
   width: 100%;
   height: auto;
 }
+@media (min-width: 1601px) {
+  .my_me {
+    left: 441px;
+    top: 140px;
+  }
+}
 
-@media (min-width: 1024px) {
+@media (max-width: 1600px) and (min-width: 1024px) {
   .my_me {
     left: pcvw(441px);
     top: pcvw(140px);

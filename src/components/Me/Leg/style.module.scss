@@ -1,80 +1,99 @@
 @import '../../../common/getvw.scss';
 
 .leg_wrap {
+  position: absolute;
+
+  .r_leg {
     position: absolute;
+    z-index: 2;
+
+    max-width: 344.32px;
+    max-height: 304.39px;
+  }
+
+  .l_leg {
+    position: absolute;
+    z-index: 6;
+
+    max-width: 453.52px;
+    max-height: 224.85px;
+  }
+}
+
+@media (min-width: 1601px) {
+  .leg_wrap {
+    left: -180px;
+    top: 340px;
 
     .r_leg {
-        position: absolute;
-        z-index: 2;
-
-        max-width: 344.32px;
-        max-height: 304.39px;
+      width: 344.32px;
+      height: 304.39px;
+      left: -100px;
+      top: -125px;
     }
 
     .l_leg {
-        position: absolute;
-        z-index: 6;
-
-        max-width: 453.52px;
-        max-height: 224.85px;
+      width: 453.52px;
+      height: 224.85px;
     }
+  }
 }
 
 // pc 버전
-@media (min-width: 1024px) {
-    .leg_wrap {
-        left: pcvw(-180px);
-        top: pcvw(340px);
-    }
+@media (max-width: 1600px) and (min-width: 1024px) {
+  .leg_wrap {
+    left: pcvw(-180px);
+    top: pcvw(340px);
+  }
 
-    .r_leg {
-        width: pcvw(344.32px);
-        height: pcvw(304.39px);
-        left: pcvw(-100px);
-        top: pcvw(-125px);
-    }
+  .r_leg {
+    width: pcvw(344.32px);
+    height: pcvw(304.39px);
+    left: pcvw(-100px);
+    top: pcvw(-125px);
+  }
 
-    .l_leg {
-        width: pcvw(453.52px);
-        height: pcvw(224.85px);
-    }
+  .l_leg {
+    width: pcvw(453.52px);
+    height: pcvw(224.85px);
+  }
 }
 
 @media (max-width: 1023px) and (min-width: 769px) {
-    .leg_wrap {
-        left: tabvw(-180px);
-        top: tabvw(340px);
-    }
+  .leg_wrap {
+    left: tabvw(-180px);
+    top: tabvw(340px);
+  }
 
-    .r_leg {
-        width: tabvw(344.32px);
-        height: tabvw(304.39px);
-        left: tabvw(-100px);
-        top: tabvw(-125px);
-    }
+  .r_leg {
+    width: tabvw(344.32px);
+    height: tabvw(304.39px);
+    left: tabvw(-100px);
+    top: tabvw(-125px);
+  }
 
-    .l_leg {
-        width: tabvw(453.52px);
-        height: tabvw(224.85px);
-    }
+  .l_leg {
+    width: tabvw(453.52px);
+    height: tabvw(224.85px);
+  }
 }
 
 // 태블릿, 모바일버전
 @media (max-width: 768px) {
-    .leg_wrap {
-        left: movw(-180px);
-        top: movw(340px);
-    }
+  .leg_wrap {
+    left: movw(-180px);
+    top: movw(340px);
+  }
 
-    .r_leg {
-        width: movw(344.32px);
-        height: movw(304.39px);
-        left: movw(-100px);
-        top: movw(-125px);
-    }
+  .r_leg {
+    width: movw(344.32px);
+    height: movw(304.39px);
+    left: movw(-100px);
+    top: movw(-125px);
+  }
 
-    .l_leg {
-        width: movw(453.52px);
-        height: movw(224.85px);
-    }
+  .l_leg {
+    width: movw(453.52px);
+    height: movw(224.85px);
+  }
 }

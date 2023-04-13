@@ -1,156 +1,187 @@
 @import '../../../common/getvw.scss';
 
 .flower_wrap {
-    position: absolute;
+  position: absolute;
 }
 
 .flower {
-    position: relative;
-    animation: flower_rotate 5s linear infinite;
-    z-index: 4;
+  position: relative;
+  animation: flower_rotate 5s linear infinite;
+  z-index: 4;
 
-    cursor: pointer;
+  cursor: pointer;
 
-    max-width: 221.24px;
-    max-height: 221.24px;
+  max-width: 221.24px;
+  max-height: 221.24px;
 
-    .center {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+  .center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 
-        max-width: 56.73px;
-        max-height: 56.73px;
-    }
+    max-width: 56.73px;
+    max-height: 56.73px;
+  }
 }
 
 .leaf {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 
-    max-width: 169.2px;
-    max-height: 220.2px;
+  max-width: 169.2px;
+  max-height: 220.2px;
 
-    .leaf_l {
-        position: absolute;
-        z-index: 2;
-        animation: flower_leaf_move 5s linear infinite;
-        max-width: 123px;
-        max-height: 174.92px;
-    }
+  .leaf_l {
+    position: absolute;
+    z-index: 2;
+    animation: flower_leaf_move 5s linear infinite;
+    max-width: 123px;
+    max-height: 174.92px;
+  }
 }
 
-@media (min-width: 1024px) {
-    .flower_wrap {
-        top: pcvw(50px);
-        left: pcvw(150px);
+@media (min-width: 1601px) {
+  .flower_wrap {
+    top: 50px;
+    left: 150px;
+  }
+
+  .flower {
+    width: 221.24px;
+    height: 221.24px;
+
+    .center {
+      width: 56.73px;
+      height: 56.73px;
     }
+  }
 
-    .flower {
-        width: pcvw(221.24px);
-        height: pcvw(221.24px);
+  .leaf {
+    width: 169.2px;
+    height: 220.2px;
+    top: -80px;
+    left: 140px;
 
-        .center {
-            width: pcvw(56.73px);
-            height: pcvw(56.73px);
-        }
+    .leaf_l {
+      width: 123px;
+      height: 174.92px;
+      top: 50px;
+      left: -60px;
     }
+  }
+}
 
-    .leaf {
-        width: pcvw(169.2px);
-        height: pcvw(220.2px);
-        top: pcvw(-80px);
-        left: pcvw(140px);
+@media (max-width: 1600px) and (min-width: 1024px) {
+  .flower_wrap {
+    top: pcvw(50px);
+    left: pcvw(150px);
+  }
 
-        .leaf_l {
-            width: pcvw(123px);
-            height: pcvw(174.92px);
-            top: pcvw(50px);
-            left: pcvw(-60px);
-        }
+  .flower {
+    width: pcvw(221.24px);
+    height: pcvw(221.24px);
+
+    .center {
+      width: pcvw(56.73px);
+      height: pcvw(56.73px);
     }
+  }
+
+  .leaf {
+    width: pcvw(169.2px);
+    height: pcvw(220.2px);
+    top: pcvw(-80px);
+    left: pcvw(140px);
+
+    .leaf_l {
+      width: pcvw(123px);
+      height: pcvw(174.92px);
+      top: pcvw(50px);
+      left: pcvw(-60px);
+    }
+  }
 }
 
 @media (max-width: 1023px) and (min-width: 769px) {
-    .flower_wrap {
-        top: tabvw(50px);
-        left: tabvw(150px);
+  .flower_wrap {
+    top: tabvw(50px);
+    left: tabvw(150px);
+  }
+
+  .flower {
+    width: tabvw(221.24px);
+    height: tabvw(221.24px);
+
+    .center {
+      width: tabvw(56.73px);
+      height: tabvw(56.73px);
     }
+  }
 
-    .flower {
-        width: tabvw(221.24px);
-        height: tabvw(221.24px);
+  .leaf {
+    width: tabvw(169.2px);
+    height: tabvw(220.2px);
+    top: tabvw(-80px);
+    left: tabvw(140px);
 
-        .center {
-            width: tabvw(56.73px);
-            height: tabvw(56.73px);
-        }
+    .leaf_l {
+      width: tabvw(123px);
+      height: tabvw(174.92px);
+      top: tabvw(50px);
+      left: tabvw(-60px);
     }
-
-    .leaf {
-        width: tabvw(169.2px);
-        height: tabvw(220.2px);
-        top: tabvw(-80px);
-        left: tabvw(140px);
-
-        .leaf_l {
-            width: tabvw(123px);
-            height: tabvw(174.92px);
-            top: tabvw(50px);
-            left: tabvw(-60px);
-        }
-    }
+  }
 }
 
 @media (max-width: 768px) {
-    .flower_wrap {
-        top: movw(50px);
-        left: movw(150px);
+  .flower_wrap {
+    top: movw(50px);
+    left: movw(150px);
+  }
+
+  .flower {
+    width: movw(221.24px);
+    height: movw(221.24px);
+
+    .center {
+      width: movw(56.73px);
+      height: movw(56.73px);
     }
+  }
 
-    .flower {
-        width: movw(221.24px);
-        height: movw(221.24px);
+  .leaf {
+    width: movw(169.2px);
+    height: movw(220.2px);
+    top: movw(-80px);
+    left: movw(140px);
 
-        .center {
-            width: movw(56.73px);
-            height: movw(56.73px);
-        }
+    .leaf_l {
+      width: movw(123px);
+      height: movw(174.92px);
+      top: movw(50px);
+      left: movw(-60px);
     }
-
-    .leaf {
-        width: movw(169.2px);
-        height: movw(220.2px);
-        top: movw(-80px);
-        left: movw(140px);
-
-        .leaf_l {
-            width: movw(123px);
-            height: movw(174.92px);
-            top: movw(50px);
-            left: movw(-60px);
-        }
-    }
+  }
 }
 
 @keyframes flower_rotate {
-    0% {
-        transform: rotate(0deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
 
-    100% {
-        transform: rotate(360deg);
-    }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes flower_leaf_move {
-    0%,
-    100% {
-        transform: rotate(0deg) translate(0px, 0px);
-    }
+  0%,
+  100% {
+    transform: rotate(0deg) translate(0px, 0px);
+  }
 
-    50% {
-        transform: rotate(-10deg) translate(-2px, 10px);
-    }
+  50% {
+    transform: rotate(-10deg) translate(-2px, 10px);
+  }
 }
